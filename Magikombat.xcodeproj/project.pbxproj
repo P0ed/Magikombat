@@ -12,7 +12,40 @@
 		5F88DFCD1B0330E6003495C3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCC1B0330E6003495C3 /* GameScene.sks */; };
 		5F88DFCF1B0330E6003495C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCE1B0330E6003495C3 /* Images.xcassets */; };
 		5F88DFD21B0330E6003495C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFD01B0330E6003495C3 /* MainMenu.xib */; };
+		5F88E0831B034D3F003495C3 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */; };
+		5F88E0841B034D3F003495C3 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F88E07B1B034D27003495C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6772A261710A4BA00ED580A;
+			remoteInfo = OpenEmuBase;
+		};
+		5F88E07D1B034D27003495C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6772A8C1710CD7E00ED580A;
+			remoteInfo = OpenEmuSystem;
+		};
+		5F88E07F1B034D38003495C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C6772A251710A4BA00ED580A;
+			remoteInfo = OpenEmuBase;
+		};
+		5F88E0811B034D38003495C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C6772A8B1710CD7E00ED580A;
+			remoteInfo = OpenEmuSystem;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +55,8 @@
 		5F88DFCC1B0330E6003495C3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F88DFCE1B0330E6003495C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F88DFD11B0330E6003495C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "OpenEmu-SDK.xcodeproj"; sourceTree = "<group>"; };
+		5F88E0851B034D57003495C3 /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F88E0831B034D3F003495C3 /* OpenEmuBase.framework in Frameworks */,
+				5F88E0841B034D3F003495C3 /* OpenEmuSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +91,7 @@
 		5F88DFC51B0330E6003495C3 /* Magikombat */ = {
 			isa = PBXGroup;
 			children = (
+				5F88DFFB1B034D26003495C3 /* GamepadKit */,
 				5F88DFC81B0330E6003495C3 /* AppDelegate.swift */,
 				5F88DFCA1B0330E6003495C3 /* GameScene.swift */,
 				5F88DFCC1B0330E6003495C3 /* GameScene.sks */,
@@ -72,6 +110,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5F88DFFB1B034D26003495C3 /* GamepadKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F88DFFC1B034D26003495C3 /* OpenEmu-SDK */,
+				5F88E0851B034D57003495C3 /* OpenEmu-SDK-Bridging-Header.h */,
+			);
+			path = GamepadKit;
+			sourceTree = "<group>";
+		};
+		5F88DFFC1B034D26003495C3 /* OpenEmu-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */,
+			);
+			path = "OpenEmu-SDK";
+			sourceTree = "<group>";
+		};
+		5F88DFFF1B034D26003495C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */,
+				5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +150,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				5F88E0801B034D38003495C3 /* PBXTargetDependency */,
+				5F88E0821B034D38003495C3 /* PBXTargetDependency */,
 			);
 			name = Magikombat;
 			productName = Magikombat;
@@ -117,12 +183,35 @@
 			mainGroup = 5F88DFBA1B0330E6003495C3;
 			productRefGroup = 5F88DFC41B0330E6003495C3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5F88DFFF1B034D26003495C3 /* Products */;
+					ProjectRef = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5F88DFC21B0330E6003495C3 /* Magikombat */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OpenEmuBase.framework;
+			remoteRef = 5F88E07B1B034D27003495C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OpenEmuSystem.framework;
+			remoteRef = 5F88E07D1B034D27003495C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5F88DFC11B0330E6003495C3 /* Resources */ = {
@@ -148,6 +237,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F88E0801B034D38003495C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OpenEmuBase;
+			targetProxy = 5F88E07F1B034D38003495C3 /* PBXContainerItemProxy */;
+		};
+		5F88E0821B034D38003495C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OpenEmuSystem;
+			targetProxy = 5F88E0811B034D38003495C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F88DFD01B0330E6003495C3 /* MainMenu.xib */ = {
@@ -246,9 +348,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -257,9 +368,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 			};
 			name = Release;
 		};

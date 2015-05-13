@@ -1,0 +1,3 @@
+[submodule "Magikombat/GamepadKit/OpenEmu-SDK"]
+	path = Magikombat/GamepadKit/OpenEmu-SDK
+	url = https://github.com/OpenEmu/OpenEmu-SDK.git
