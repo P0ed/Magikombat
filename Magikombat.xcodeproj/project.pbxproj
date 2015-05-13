@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */; };
+		5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */; };
 		5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFC81B0330E6003495C3 /* AppDelegate.swift */; };
 		5F88DFCB1B0330E6003495C3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFCA1B0330E6003495C3 /* GameScene.swift */; };
 		5F88DFCD1B0330E6003495C3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCC1B0330E6003495C3 /* GameScene.sks */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F88DFC71B0330E6003495C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F88DFC81B0330E6003495C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			children = (
 				5F88DFFC1B034D26003495C3 /* OpenEmu-SDK */,
 				5F88E0851B034D57003495C3 /* OpenEmu-SDK-Bridging-Header.h */,
+				5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */,
+				5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */,
 			);
 			path = GamepadKit;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */,
+				5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */,
 				5F88DFCB1B0330E6003495C3 /* GameScene.swift in Sources */,
 				5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */,
 			);
