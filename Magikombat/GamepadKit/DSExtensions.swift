@@ -35,4 +35,9 @@ enum DSControl: UInt {
 	case ButtonOptions = 10
 
 	case DPad = 64
+
+	case StickLeft = 65
+	case StickRight = 66
+	case TriggerLeft = 67
+	case TriggerRight = 68
 }
