@@ -2,9 +2,9 @@ import Foundation
 
 class DeviceConfiguration {
 
-	var actionsMapTable = [Int: DeviceAction<AnyObject>]()
+	var actionsMapTable = [DSControl: DeviceAction<AnyObject>]()
 
-	func controlForEvent(event: OEHIDEvent) -> Int {
-		return 0
+	func controlForEvent(event: OEHIDEvent) -> DSControl {
+		return .Unknown
 	}
 }
