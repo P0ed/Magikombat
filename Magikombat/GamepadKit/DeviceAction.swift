@@ -4,8 +4,8 @@ class DeviceAction<T> {
 
 	let action: SinkOf<T>
 
-	init(action: SinkOf<T>) {
-		self.action = action
+	init(_ action: (T) -> ()) {
+		self.action = SinkOf<T>(action)
 	}
 
 	func performAction(value: T) {

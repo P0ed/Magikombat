@@ -4,40 +4,52 @@ struct DSVector {
 	var dx: Double
 	var dy: Double
 
+	static let zeroVector = DSVector(dx: 0.0, dy: 0.0)
+
 	init(dx: Double, dy: Double) {
 		self.dx = dx
 		self.dy = dy
 	}
-
-	init() {
-		self.init(dx: 0.0, dy: 0.0)
-	}
-
-	init(dx: Int, dy: Int) {
-		self.init(dx: dx, dy: dy)
-	}
 }
 
-enum DSControl: UInt {
-	case Unknown = 0
+enum DSButton: UInt {
+	case Square = 1
+	case Cross = 2
+	case Circle = 3
+	case Triangle = 4
+	case L1 = 5
+	case R1 = 6
+	case L2 = 7
+	case R2 = 8
+	case Share = 9
+	case Options = 10
+}
 
-	case ButtonSquare = 1
-	case ButtonCross = 2
-	case ButtonCircle = 3
-	case ButtonTriangle = 4
+enum DSStick {
+	case Left
+	case Right
+}
 
-	case ButtonL1 = 5
-	case ButtonR1 = 6
-	case ButtonL2 = 7
-	case ButtonR2 = 8
+enum DSTrigger {
+	case Left
+	case Right
+}
 
-	case ButtonShare = 9
-	case ButtonOptions = 10
+enum DSHatDirection: UInt {
+	case Null		= 0
+	case North		= 1
+	case East		= 2
+	case South		= 4
+	case West		= 8
+	case NorthEast	= 3
+	case SouthEast	= 6
+	case NorthWest	= 9
+	case SouthWest	= 12
+}
 
-	case DPad = 64
-
-	case StickLeft = 65
-	case StickRight = 66
-	case TriggerLeft = 67
-	case TriggerRight = 68
+enum DSControl {
+	case Button(DSButton)
+	case Stick(DSStick)
+	case Trigger(DSTrigger)
+	case DPad(DSHatDirection)
 }
