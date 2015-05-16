@@ -56,6 +56,10 @@ class EventsController {
 					action.performAction(hatDirection)
 				}
 			}
+		case OEHIDEventTypeKeyboard.value:
+			if let action = deviceConfiguration.keyboardMapTable[event.keycode] {
+				action.performAction(Bool(event.state.value))
+			}
 		default: break
 		}
 	}
