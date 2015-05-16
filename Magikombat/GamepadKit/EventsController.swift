@@ -6,8 +6,8 @@ class EventsController {
 
 	var leftJoystick = DSVector.zeroVector
 	var rightJoystick = DSVector.zeroVector
-	var leftTrigger = Double()
-	var rightTrigger = Double()
+	var leftTrigger = 0.0
+	var rightTrigger = 0.0
 	var hatDirection = DSHatDirection.Null
 
 	func handleEvent(event: OEHIDEvent) {
@@ -17,11 +17,11 @@ class EventsController {
 			case OEHIDEventAxisX.value:
 				leftJoystick.dx = event.value().native
 			case OEHIDEventAxisY.value:
-				leftJoystick.dy = event.value().native
+				leftJoystick.dy = -event.value().native
 			case OEHIDEventAxisZ.value:
 				rightJoystick.dx = event.value().native
 			case OEHIDEventAxisRz.value:
-				rightJoystick.dy = event.value().native
+				rightJoystick.dy = -event.value().native
 			default: break
 			}
 		case OEHIDEventTypeTrigger.value:

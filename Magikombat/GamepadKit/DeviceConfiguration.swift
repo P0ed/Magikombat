@@ -1,6 +1,6 @@
 import Foundation
 
-class DeviceConfiguration {
+struct DeviceConfiguration {
 
 	var buttonsMapTable = [DSButton: DeviceAction<Bool>]()
 	var dPadMapTable = [DSHatDirection: DeviceAction<Bool>]()

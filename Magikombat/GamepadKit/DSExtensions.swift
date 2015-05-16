@@ -5,11 +5,6 @@ struct DSVector {
 	var dy: Double
 
 	static let zeroVector = DSVector(dx: 0.0, dy: 0.0)
-
-	init(dx: Double, dy: Double) {
-		self.dx = dx
-		self.dy = dy
-	}
 }
 
 enum DSButton: UInt {
