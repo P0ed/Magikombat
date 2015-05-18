@@ -3,13 +3,7 @@ import SpriteKit
 class Model {
 
 	var positionSink: SinkOf<CGPoint>?
-	var position = CGPoint() {
-		didSet {
-			if let positionSink = self.positionSink {
-				positionSink.put(self.position)
-			}
-		}
-	}
+	var position = CGPoint() { didSet { if let positionSink = self.positionSink { positionSink.put(self.position) } } }
 
 	func move() {
 		position.x += 100
@@ -19,17 +13,14 @@ class Model {
 class SpaceshipNode: SKSpriteNode {
 	let model = Model()
 
-	func positionSink() -> SinkOf<CGPoint> {
-		return SinkOf() { [unowned self] newPosition in
-			self.position = newPosition
-		}
-	}
+	func positionSink() -> SinkOf<CGPoint> { return SinkOf() { [unowned self] newPosition in self.position = newPosition } }
+
 	deinit {
 		model.positionSink = nil
 	}
 }
 
-class GameScene: SKScene {
+class GameLevelScene: SKScene {
 
 	var model: Model?
 
@@ -51,6 +42,10 @@ class GameScene: SKScene {
 		}
 
 		appDelegate().eventsController.deviceConfiguration.buttonsMapTable = [DSButton.Cross: moveAction]
+
+		let tileMap = TileMapGenerator.generateTileMap()
+		let gameLevel = GameLevel(tileMap: tileMap)
+		self.loadGameLevel(gameLevel)
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -58,4 +53,8 @@ class GameScene: SKScene {
 		model!.position.x += CGFloat(vector.dx * 10)
 		model!.position.y += CGFloat(vector.dy * 10)
     }
+
+	func loadGameLevel(gameLevel: GameLevel) {
+		
+	}
 }

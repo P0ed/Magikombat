@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F426D841B07992B00B0FE1F /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */; };
+		5F426D8E1B079E1600B0FE1F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D8D1B079E1600B0FE1F /* main.swift */; };
+		5F426D941B079F4E00B0FE1F /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D931B079F4E00B0FE1F /* GameLevel.swift */; };
+		5F426DA01B0A45A100B0FE1F /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D9F1B0A45A100B0FE1F /* TileMap.swift */; };
 		5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */; };
 		5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */; };
 		5F7208CF1B03EF6F007702BA /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7208CE1B03EF6F007702BA /* DeviceAction.swift */; };
 		5F7208D11B047A24007702BA /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7208D01B047A24007702BA /* DSExtensions.swift */; };
 		5F7208D71B04B982007702BA /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F7208D61B04B982007702BA /* Controller-Database.plist */; };
 		5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFC81B0330E6003495C3 /* AppDelegate.swift */; };
-		5F88DFCB1B0330E6003495C3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFCA1B0330E6003495C3 /* GameScene.swift */; };
+		5F88DFCB1B0330E6003495C3 /* GameLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */; };
 		5F88DFCD1B0330E6003495C3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCC1B0330E6003495C3 /* GameScene.sks */; };
 		5F88DFCF1B0330E6003495C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCE1B0330E6003495C3 /* Images.xcassets */; };
 		5F88DFD21B0330E6003495C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFD01B0330E6003495C3 /* MainMenu.xib */; };
@@ -52,7 +56,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5F426D891B079E1600B0FE1F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapGenerator.swift; sourceTree = "<group>"; };
+		5F426D8B1B079E1600B0FE1F /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F426D8D1B079E1600B0FE1F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5F426D931B079F4E00B0FE1F /* GameLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
+		5F426D951B07A0D000B0FE1F /* PythonLevelGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonLevelGenerator.py; sourceTree = "<group>"; };
+		5F426D9F1B0A45A100B0FE1F /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
 		5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
 		5F7208CE1B03EF6F007702BA /* DeviceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAction.swift; sourceTree = "<group>"; };
@@ -62,7 +84,7 @@
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F88DFC71B0330E6003495C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F88DFC81B0330E6003495C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F88DFCA1B0330E6003495C3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelScene.swift; sourceTree = "<group>"; };
 		5F88DFCC1B0330E6003495C3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F88DFCE1B0330E6003495C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F88DFD11B0330E6003495C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -71,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F426D881B079E1600B0FE1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F88DFC01B0330E6003495C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,10 +112,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F426D801B0798A400B0FE1F /* LevelKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */,
+				5F426D951B07A0D000B0FE1F /* PythonLevelGenerator.py */,
+			);
+			path = LevelKit;
+			sourceTree = "<group>";
+		};
+		5F426D851B079D0A00B0FE1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F426D921B079F2E00B0FE1F /* GameLevel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F426D861B079DBF00B0FE1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F426D971B07A5BC00B0FE1F /* GameLevel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F426D8C1B079E1600B0FE1F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				5F426D8D1B079E1600B0FE1F /* main.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		5F426D921B079F2E00B0FE1F /* GameLevel */ = {
+			isa = PBXGroup;
+			children = (
+				5F426D931B079F4E00B0FE1F /* GameLevel.swift */,
+				5F426D9F1B0A45A100B0FE1F /* TileMap.swift */,
+			);
+			path = GameLevel;
+			sourceTree = "<group>";
+		};
+		5F426D971B07A5BC00B0FE1F /* GameLevel */ = {
+			isa = PBXGroup;
+			children = (
+				5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */,
+			);
+			path = GameLevel;
+			sourceTree = "<group>";
+		};
 		5F88DFBA1B0330E6003495C3 = {
 			isa = PBXGroup;
 			children = (
 				5F88DFC51B0330E6003495C3 /* Magikombat */,
+				5F426D8C1B079E1600B0FE1F /* Server */,
 				5F88DFC41B0330E6003495C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				5F88DFC31B0330E6003495C3 /* Magikombat.app */,
+				5F426D8B1B079E1600B0FE1F /* Server */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,9 +183,11 @@
 		5F88DFC51B0330E6003495C3 /* Magikombat */ = {
 			isa = PBXGroup;
 			children = (
+				5F426D801B0798A400B0FE1F /* LevelKit */,
 				5F88DFFB1B034D26003495C3 /* GamepadKit */,
+				5F426D851B079D0A00B0FE1F /* Models */,
+				5F426D861B079DBF00B0FE1F /* Views */,
 				5F88DFC81B0330E6003495C3 /* AppDelegate.swift */,
-				5F88DFCA1B0330E6003495C3 /* GameScene.swift */,
 				5F88DFCC1B0330E6003495C3 /* GameScene.sks */,
 				5F88DFCE1B0330E6003495C3 /* Images.xcassets */,
 				5F88DFD01B0330E6003495C3 /* MainMenu.xib */,
@@ -156,6 +239,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5F426D8A1B079E1600B0FE1F /* Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F426D8F1B079E1600B0FE1F /* Build configuration list for PBXNativeTarget "Server" */;
+			buildPhases = (
+				5F426D871B079E1600B0FE1F /* Sources */,
+				5F426D881B079E1600B0FE1F /* Frameworks */,
+				5F426D891B079E1600B0FE1F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Server;
+			productName = Server;
+			productReference = 5F426D8B1B079E1600B0FE1F /* Server */;
+			productType = "com.apple.product-type.tool";
+		};
 		5F88DFC21B0330E6003495C3 /* Magikombat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F88DFE11B0330E6003495C3 /* Build configuration list for PBXNativeTarget "Magikombat" */;
@@ -184,6 +284,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = P0ed;
 				TargetAttributes = {
+					5F426D8A1B079E1600B0FE1F = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					5F88DFC21B0330E6003495C3 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -209,6 +312,7 @@
 			projectRoot = "";
 			targets = (
 				5F88DFC21B0330E6003495C3 /* Magikombat */,
+				5F426D8A1B079E1600B0FE1F /* Server */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +349,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5F426D871B079E1600B0FE1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F426D8E1B079E1600B0FE1F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F88DFBF1B0330E6003495C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,8 +364,11 @@
 				5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */,
 				5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */,
 				5F7208D11B047A24007702BA /* DSExtensions.swift in Sources */,
+				5F426D841B07992B00B0FE1F /* TileMapGenerator.swift in Sources */,
+				5F426D941B079F4E00B0FE1F /* GameLevel.swift in Sources */,
 				5F7208CF1B03EF6F007702BA /* DeviceAction.swift in Sources */,
-				5F88DFCB1B0330E6003495C3 /* GameScene.swift in Sources */,
+				5F88DFCB1B0330E6003495C3 /* GameLevelScene.swift in Sources */,
+				5F426DA01B0A45A100B0FE1F /* TileMap.swift in Sources */,
 				5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +400,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5F426D901B079E1600B0FE1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F426D911B079E1600B0FE1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5F88DFDF1B0330E6003495C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -408,6 +541,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F426D8F1B079E1600B0FE1F /* Build configuration list for PBXNativeTarget "Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F426D901B079E1600B0FE1F /* Debug */,
+				5F426D911B079E1600B0FE1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5F88DFBE1B0330E6003495C3 /* Build configuration list for PBXProject "Magikombat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

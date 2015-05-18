@@ -33,11 +33,11 @@ class EventsController {
 			default: break
 			}
 		case OEHIDEventTypeButton.value:
-			if let button = DSButton(rawValue: event.buttonNumber), action = deviceConfiguration.buttonsMapTable[button] {
+			if let button = DSButton(rawValue: Int(event.buttonNumber)), action = deviceConfiguration.buttonsMapTable[button] {
 				action.performAction(Bool(event.state.value))
 			}
 		case OEHIDEventTypeHatSwitch.value:
-			if let hatDirection = DSHatDirection(rawValue: event.hatDirection.value) {
+			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.value)) {
 				let buttons = changedStateDPadButtons(self.hatDirection, hatDirection)
 				self.hatDirection = hatDirection
 
@@ -57,7 +57,7 @@ class EventsController {
 				}
 			}
 		case OEHIDEventTypeKeyboard.value:
-			if let action = deviceConfiguration.keyboardMapTable[event.keycode] {
+			if let action = deviceConfiguration.keyboardMapTable[Int(event.keycode)] {
 				action.performAction(Bool(event.state.value))
 			}
 		default: break
@@ -81,11 +81,11 @@ class EventsController {
 				control = .Trigger(.Right)
 			}
 		case OEHIDEventTypeButton.value:
-			if let button = DSButton(rawValue: event.buttonNumber) {
+			if let button = DSButton(rawValue: Int(event.buttonNumber)) {
 				control = .Button(button)
 			}
 		case OEHIDEventTypeHatSwitch.value:
-			if let hatDirection = DSHatDirection(rawValue: event.hatDirection.value) {
+			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.value)) {
 				control = .DPad(hatDirection)
 			}
 		default: break

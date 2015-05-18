@@ -7,7 +7,7 @@ struct DSVector {
 	static let zeroVector = DSVector(dx: 0.0, dy: 0.0)
 }
 
-enum DSButton: UInt {
+enum DSButton: Int {
 	case Square = 1
 	case Cross = 2
 	case Circle = 3
@@ -30,7 +30,7 @@ enum DSTrigger {
 	case Right
 }
 
-enum DSHatDirection: UInt {
+enum DSHatDirection: Int {
 	case Null		= 0
 	case North		= 1
 	case East		= 2
