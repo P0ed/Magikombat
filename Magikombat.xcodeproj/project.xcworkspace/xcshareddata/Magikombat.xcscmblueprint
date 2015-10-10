@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A41448BAB90A1DBE1A183A19F8885D4512F61222",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "660BA74C3D0A9E3ADEB886972207A39D8C1DB732" : 0,
+    "A41448BAB90A1DBE1A183A19F8885D4512F61222" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07537A5E-3ABA-4410-8846-65662214AC77",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "660BA74C3D0A9E3ADEB886972207A39D8C1DB732" : "Magikombat\/Magikombat\/GamepadKit\/OpenEmu-SDK\/",
+    "A41448BAB90A1DBE1A183A19F8885D4512F61222" : "Magikombat\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Magikombat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Magikombat.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OpenEmu\/OpenEmu-SDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "660BA74C3D0A9E3ADEB886972207A39D8C1DB732"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/P0ed\/Magikombat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A41448BAB90A1DBE1A183A19F8885D4512F61222"
+    }
+  ]
+}

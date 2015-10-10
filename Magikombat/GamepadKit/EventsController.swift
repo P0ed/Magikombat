@@ -11,34 +11,34 @@ class EventsController {
 	var hatDirection = DSHatDirection.Null
 
 	func handleEvent(event: OEHIDEvent) {
-		switch event.type.value {
-		case OEHIDEventTypeAxis.value:
-			switch event.axis.value {
-			case OEHIDEventAxisX.value:
-				leftJoystick.dx = event.value().native
-			case OEHIDEventAxisY.value:
-				leftJoystick.dy = -event.value().native
-			case OEHIDEventAxisZ.value:
-				rightJoystick.dx = event.value().native
-			case OEHIDEventAxisRz.value:
-				rightJoystick.dy = -event.value().native
+		switch event.type.rawValue {
+		case OEHIDEventTypeAxis.rawValue:
+			switch event.axis.rawValue {
+			case OEHIDEventAxisX.rawValue:
+				leftJoystick.dx = event.value.native
+			case OEHIDEventAxisY.rawValue:
+				leftJoystick.dy = -event.value.native
+			case OEHIDEventAxisZ.rawValue:
+				rightJoystick.dx = event.value.native
+			case OEHIDEventAxisRz.rawValue:
+				rightJoystick.dy = -event.value.native
 			default: break
 			}
-		case OEHIDEventTypeTrigger.value:
-			switch event.axis.value {
-			case OEHIDEventAxisRx.value:
-				leftTrigger = event.value().native
-			case OEHIDEventAxisRy.value:
-				rightTrigger = event.value().native
+		case OEHIDEventTypeTrigger.rawValue:
+			switch event.axis.rawValue {
+			case OEHIDEventAxisRx.rawValue:
+				leftTrigger = event.value.native
+			case OEHIDEventAxisRy.rawValue:
+				rightTrigger = event.value.native
 			default: break
 			}
-		case OEHIDEventTypeButton.value:
+		case OEHIDEventTypeButton.rawValue:
 			if let button = DSButton(rawValue: Int(event.buttonNumber)), action = deviceConfiguration.buttonsMapTable[button] {
-				action.performAction(Bool(event.state.value))
+				action.performAction(Bool(event.state.rawValue))
 			}
-		case OEHIDEventTypeHatSwitch.value:
-			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.value)) {
-				let buttons = changedStateDPadButtons(self.hatDirection, hatDirection)
+		case OEHIDEventTypeHatSwitch.rawValue:
+			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.rawValue)) {
+				let buttons = changedStateDPadButtons(self.hatDirection, current: hatDirection)
 				self.hatDirection = hatDirection
 
 				func performActions(buttons: [DSHatDirection], pressed: Bool) {
@@ -49,16 +49,16 @@ class EventsController {
 					}
 				}
 
-				performActions(buttons.up, false)
-				performActions(buttons.down, true)
+				performActions(buttons.up, pressed: false)
+				performActions(buttons.down, pressed: true)
 
 				if let action = deviceConfiguration.dPadAction {
 					action.performAction(hatDirection)
 				}
 			}
-		case OEHIDEventTypeKeyboard.value:
+		case OEHIDEventTypeKeyboard.rawValue:
 			if let action = deviceConfiguration.keyboardMapTable[Int(event.keycode)] {
-				action.performAction(Bool(event.state.value))
+				action.performAction(Bool(event.state.rawValue))
 			}
 		default: break
 		}
@@ -67,25 +67,25 @@ class EventsController {
 	func controlForEvent(event: OEHIDEvent) -> DSControl? {
 		var control: DSControl?
 
-		switch event.type.value {
-		case OEHIDEventTypeAxis.value:
-			if event.axis.value == OEHIDEventAxisX.value || event.axis.value == OEHIDEventAxisY.value {
+		switch event.type.rawValue {
+		case OEHIDEventTypeAxis.rawValue:
+			if event.axis.rawValue == OEHIDEventAxisX.rawValue || event.axis.rawValue == OEHIDEventAxisY.rawValue {
 				control = .Stick(.Left)
-			} else if event.axis.value == OEHIDEventAxisZ.value || event.axis.value == OEHIDEventAxisRz.value {
+			} else if event.axis.rawValue == OEHIDEventAxisZ.rawValue || event.axis.rawValue == OEHIDEventAxisRz.rawValue {
 				control = .Stick(.Right)
 			}
-		case OEHIDEventTypeTrigger.value:
-			if event.axis.value == OEHIDEventAxisRx.value {
+		case OEHIDEventTypeTrigger.rawValue:
+			if event.axis.rawValue == OEHIDEventAxisRx.rawValue {
 				control = .Trigger(.Left)
-			} else if event.axis.value == OEHIDEventAxisRy.value {
+			} else if event.axis.rawValue == OEHIDEventAxisRy.rawValue {
 				control = .Trigger(.Right)
 			}
-		case OEHIDEventTypeButton.value:
+		case OEHIDEventTypeButton.rawValue:
 			if let button = DSButton(rawValue: Int(event.buttonNumber)) {
 				control = .Button(button)
 			}
-		case OEHIDEventTypeHatSwitch.value:
-			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.value)) {
+		case OEHIDEventTypeHatSwitch.rawValue:
+			if let hatDirection = DSHatDirection(rawValue: Int(event.hatDirection.rawValue)) {
 				control = .DPad(hatDirection)
 			}
 		default: break

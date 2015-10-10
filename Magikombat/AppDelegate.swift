@@ -4,8 +4,8 @@ import SpriteKit
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
             let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameLevelScene
@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var skView: SKView!
 
 	var eventsController = EventsController()
-	var eventMonitors = [String: AnyObject]()
+	var eventMonitors = [UInt: AnyObject]()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         /* Pick a size for the scene */
@@ -56,17 +56,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 		notificationCenter.addObserverForName(didAddDeviceKey, object: nil, queue: NSOperationQueue.mainQueue()) { note in
 			let deviceHandler = note.userInfo![OEDeviceManagerDeviceHandlerUserInfoKey] as! OEDeviceHandler
-			if let identifier = deviceHandler.controllerDescription?.identifier {
-				self.eventMonitors[identifier] = OEDeviceManager.sharedDeviceManager().addEventMonitorForDeviceHandler(deviceHandler) {
-					handler, event in
-					self.eventsController.handleEvent(event)
-				}
+			self.eventMonitors[deviceHandler.deviceIdentifier] = OEDeviceManager.sharedDeviceManager().addEventMonitorForDeviceHandler(deviceHandler) {
+				handler, event in
+				self.eventsController.handleEvent(event)
 			}
 		}
 
 		notificationCenter.addObserverForName(didRemoveDeviceKey, object: nil, queue: NSOperationQueue.mainQueue()) { note in
 			let deviceHandler = note.userInfo![OEDeviceManagerDeviceHandlerUserInfoKey] as! OEDeviceHandler
-			self.eventMonitors.removeValueForKey(deviceHandler.controllerDescription.identifier)
+			self.eventMonitors.removeValueForKey(deviceHandler.deviceIdentifier)
 		}
 	}
 }
@@ -74,3 +72,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 func appDelegate() -> AppDelegate {
 	return NSApplication.sharedApplication().delegate as! AppDelegate
 }
+

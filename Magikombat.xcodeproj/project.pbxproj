@@ -7,166 +7,199 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F426D841B07992B00B0FE1F /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */; };
-		5F426D8E1B079E1600B0FE1F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D8D1B079E1600B0FE1F /* main.swift */; };
-		5F426D941B079F4E00B0FE1F /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D931B079F4E00B0FE1F /* GameLevel.swift */; };
-		5F426DA01B0A45A100B0FE1F /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F426D9F1B0A45A100B0FE1F /* TileMap.swift */; };
-		5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */; };
-		5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */; };
-		5F7208CF1B03EF6F007702BA /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7208CE1B03EF6F007702BA /* DeviceAction.swift */; };
-		5F7208D11B047A24007702BA /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7208D01B047A24007702BA /* DSExtensions.swift */; };
-		5F7208D71B04B982007702BA /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F7208D61B04B982007702BA /* Controller-Database.plist */; };
-		5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFC81B0330E6003495C3 /* AppDelegate.swift */; };
-		5F88DFCB1B0330E6003495C3 /* GameLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */; };
-		5F88DFCD1B0330E6003495C3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCC1B0330E6003495C3 /* GameScene.sks */; };
-		5F88DFCF1B0330E6003495C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFCE1B0330E6003495C3 /* Images.xcassets */; };
-		5F88DFD21B0330E6003495C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F88DFD01B0330E6003495C3 /* MainMenu.xib */; };
-		5F88E0831B034D3F003495C3 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */; };
-		5F88E0841B034D3F003495C3 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */; };
+		5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA41BC9896E00034E2E /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
+		5F1C40141BC9896E00034E2E /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA71BC9896E00034E2E /* Controller-Database.plist */; settings = {ASSET_TAGS = (); }; };
+		5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA81BC9896E00034E2E /* DeviceAction.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAB1BC9896E00034E2E /* EventsController.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40401BC9896E00034E2E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40051BC9896E00034E2E /* GameScene.sks */; settings = {ASSET_TAGS = (); }; };
+		5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40061BC9896E00034E2E /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40451BC9896E00034E2E /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400D1BC9896E00034E2E /* GameLevel.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40461BC9896E00034E2E /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400E1BC9896E00034E2E /* TileMap.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40471BC9896E00034E2E /* GameLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C40111BC9896E00034E2E /* GameLevelScene.swift */; settings = {ASSET_TAGS = (); }; };
+		5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */; };
+		5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5F88E07B1B034D27003495C3 /* PBXContainerItemProxy */ = {
+		5F1C404A1BC9896E00034E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C6772A261710A4BA00ED580A;
 			remoteInfo = OpenEmuBase;
 		};
-		5F88E07D1B034D27003495C3 /* PBXContainerItemProxy */ = {
+		5F1C404C1BC9896E00034E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C6772A8C1710CD7E00ED580A;
 			remoteInfo = OpenEmuSystem;
 		};
-		5F88E07F1B034D38003495C3 /* PBXContainerItemProxy */ = {
+		5F1C40501BC98C4E00034E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C6772A251710A4BA00ED580A;
 			remoteInfo = OpenEmuBase;
 		};
-		5F88E0811B034D38003495C3 /* PBXContainerItemProxy */ = {
+		5F1C40521BC98C4E00034E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C6772A8B1710CD7E00ED580A;
 			remoteInfo = OpenEmuSystem;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5F426D891B079E1600B0FE1F /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapGenerator.swift; sourceTree = "<group>"; };
-		5F426D8B1B079E1600B0FE1F /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F426D8D1B079E1600B0FE1F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		5F426D931B079F4E00B0FE1F /* GameLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
-		5F426D951B07A0D000B0FE1F /* PythonLevelGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonLevelGenerator.py; sourceTree = "<group>"; };
-		5F426D9F1B0A45A100B0FE1F /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
-		5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
-		5F7208CE1B03EF6F007702BA /* DeviceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAction.swift; sourceTree = "<group>"; };
-		5F7208D01B047A24007702BA /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
-		5F7208D61B04B982007702BA /* Controller-Database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Controller-Database.plist"; path = "Magikombat/GamepadKit/Controller-Database.plist"; sourceTree = SOURCE_ROOT; };
-		5F7208D81B04CDD7007702BA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5F1C3FA51BC9896E00034E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5F1C3FA71BC9896E00034E2E /* Controller-Database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Database.plist"; sourceTree = "<group>"; };
+		5F1C3FA81BC9896E00034E2E /* DeviceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAction.swift; sourceTree = "<group>"; };
+		5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
+		5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
+		5F1C3FAB1BC9896E00034E2E /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "OpenEmu-SDK.xcodeproj"; sourceTree = "<group>"; };
+		5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		5F1C40041BC9896E00034E2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5F1C40051BC9896E00034E2E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5F1C40061BC9896E00034E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F1C40071BC9896E00034E2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1C40091BC9896E00034E2E /* PythonLevelGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonLevelGenerator.py; sourceTree = "<group>"; };
+		5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapGenerator.swift; sourceTree = "<group>"; };
+		5F1C400D1BC9896E00034E2E /* GameLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
+		5F1C400E1BC9896E00034E2E /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
+		5F1C40111BC9896E00034E2E /* GameLevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevelScene.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F88DFC71B0330E6003495C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F88DFC81B0330E6003495C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelScene.swift; sourceTree = "<group>"; };
-		5F88DFCC1B0330E6003495C3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		5F88DFCE1B0330E6003495C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5F88DFD11B0330E6003495C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "OpenEmu-SDK.xcodeproj"; sourceTree = "<group>"; };
-		5F88E0851B034D57003495C3 /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5F426D881B079E1600B0FE1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F88DFC01B0330E6003495C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F88E0831B034D3F003495C3 /* OpenEmuBase.framework in Frameworks */,
-				5F88E0841B034D3F003495C3 /* OpenEmuSystem.framework in Frameworks */,
+				5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */,
+				5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F426D801B0798A400B0FE1F /* LevelKit */ = {
+		5F1C3FA21BC9896E00034E2E /* Magikombat */ = {
 			isa = PBXGroup;
 			children = (
-				5F426D831B07992B00B0FE1F /* TileMapGenerator.swift */,
-				5F426D951B07A0D000B0FE1F /* PythonLevelGenerator.py */,
+				5F1C3FA61BC9896E00034E2E /* GamepadKit */,
+				5F1C404F1BC9898C00034E2E /* Menu */,
+				5F1C404E1BC9898200034E2E /* LevelEditor */,
+				5F1C40081BC9896E00034E2E /* LevelKit */,
+				5F1C400B1BC9896E00034E2E /* Models */,
+				5F1C400F1BC9896E00034E2E /* Views */,
+				5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */,
+				5F1C3FA41BC9896E00034E2E /* MainMenu.xib */,
+				5F1C40051BC9896E00034E2E /* GameScene.sks */,
+				5F1C40061BC9896E00034E2E /* Images.xcassets */,
+				5F1C40071BC9896E00034E2E /* Info.plist */,
+			);
+			path = Magikombat;
+			sourceTree = "<group>";
+		};
+		5F1C3FA61BC9896E00034E2E /* GamepadKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C3FA71BC9896E00034E2E /* Controller-Database.plist */,
+				5F1C3FA81BC9896E00034E2E /* DeviceAction.swift */,
+				5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */,
+				5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */,
+				5F1C3FAB1BC9896E00034E2E /* EventsController.swift */,
+				5F1C3FAC1BC9896E00034E2E /* OpenEmu-SDK */,
+				5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */,
+				5F1C40041BC9896E00034E2E /* README.md */,
+			);
+			path = GamepadKit;
+			sourceTree = "<group>";
+		};
+		5F1C3FAC1BC9896E00034E2E /* OpenEmu-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */,
+			);
+			path = "OpenEmu-SDK";
+			sourceTree = "<group>";
+		};
+		5F1C3FAF1BC9896E00034E2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */,
+				5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1C40081BC9896E00034E2E /* LevelKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C40091BC9896E00034E2E /* PythonLevelGenerator.py */,
+				5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */,
 			);
 			path = LevelKit;
 			sourceTree = "<group>";
 		};
-		5F426D851B079D0A00B0FE1F /* Models */ = {
+		5F1C400B1BC9896E00034E2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5F426D921B079F2E00B0FE1F /* GameLevel */,
+				5F1C400C1BC9896E00034E2E /* GameLevel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5F426D861B079DBF00B0FE1F /* Views */ = {
+		5F1C400C1BC9896E00034E2E /* GameLevel */ = {
 			isa = PBXGroup;
 			children = (
-				5F426D971B07A5BC00B0FE1F /* GameLevel */,
+				5F1C400D1BC9896E00034E2E /* GameLevel.swift */,
+				5F1C400E1BC9896E00034E2E /* TileMap.swift */,
+			);
+			path = GameLevel;
+			sourceTree = "<group>";
+		};
+		5F1C400F1BC9896E00034E2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F1C40101BC9896E00034E2E /* GameLevel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5F426D8C1B079E1600B0FE1F /* Server */ = {
+		5F1C40101BC9896E00034E2E /* GameLevel */ = {
 			isa = PBXGroup;
 			children = (
-				5F426D8D1B079E1600B0FE1F /* main.swift */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
-		5F426D921B079F2E00B0FE1F /* GameLevel */ = {
-			isa = PBXGroup;
-			children = (
-				5F426D931B079F4E00B0FE1F /* GameLevel.swift */,
-				5F426D9F1B0A45A100B0FE1F /* TileMap.swift */,
+				5F1C40111BC9896E00034E2E /* GameLevelScene.swift */,
 			);
 			path = GameLevel;
 			sourceTree = "<group>";
 		};
-		5F426D971B07A5BC00B0FE1F /* GameLevel */ = {
+		5F1C404E1BC9898200034E2E /* LevelEditor */ = {
 			isa = PBXGroup;
 			children = (
-				5F88DFCA1B0330E6003495C3 /* GameLevelScene.swift */,
 			);
-			path = GameLevel;
+			path = LevelEditor;
+			sourceTree = "<group>";
+		};
+		5F1C404F1BC9898C00034E2E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		5F88DFBA1B0330E6003495C3 = {
 			isa = PBXGroup;
 			children = (
-				5F88DFC51B0330E6003495C3 /* Magikombat */,
-				5F426D8C1B079E1600B0FE1F /* Server */,
+				5F1C3FA21BC9896E00034E2E /* Magikombat */,
 				5F88DFC41B0330E6003495C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,63 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				5F88DFC31B0330E6003495C3 /* Magikombat.app */,
-				5F426D8B1B079E1600B0FE1F /* Server */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5F88DFC51B0330E6003495C3 /* Magikombat */ = {
-			isa = PBXGroup;
-			children = (
-				5F426D801B0798A400B0FE1F /* LevelKit */,
-				5F88DFFB1B034D26003495C3 /* GamepadKit */,
-				5F426D851B079D0A00B0FE1F /* Models */,
-				5F426D861B079DBF00B0FE1F /* Views */,
-				5F88DFC81B0330E6003495C3 /* AppDelegate.swift */,
-				5F88DFCC1B0330E6003495C3 /* GameScene.sks */,
-				5F88DFCE1B0330E6003495C3 /* Images.xcassets */,
-				5F88DFD01B0330E6003495C3 /* MainMenu.xib */,
-				5F88DFC61B0330E6003495C3 /* Supporting Files */,
-			);
-			path = Magikombat;
-			sourceTree = "<group>";
-		};
-		5F88DFC61B0330E6003495C3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5F88DFC71B0330E6003495C3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F88DFFB1B034D26003495C3 /* GamepadKit */ = {
-			isa = PBXGroup;
-			children = (
-				5F88DFFC1B034D26003495C3 /* OpenEmu-SDK */,
-				5F7208D61B04B982007702BA /* Controller-Database.plist */,
-				5F88E0851B034D57003495C3 /* OpenEmu-SDK-Bridging-Header.h */,
-				5F4BFFFB1B03DFDC00EBCC60 /* EventsController.swift */,
-				5F4BFFFD1B03E04300EBCC60 /* DeviceConfiguration.swift */,
-				5F7208CE1B03EF6F007702BA /* DeviceAction.swift */,
-				5F7208D01B047A24007702BA /* DSExtensions.swift */,
-				5F7208D81B04CDD7007702BA /* README.md */,
-			);
-			path = GamepadKit;
-			sourceTree = "<group>";
-		};
-		5F88DFFC1B034D26003495C3 /* OpenEmu-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */,
-			);
-			path = "OpenEmu-SDK";
-			sourceTree = "<group>";
-		};
-		5F88DFFF1B034D26003495C3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */,
-				5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,23 +215,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F426D8A1B079E1600B0FE1F /* Server */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F426D8F1B079E1600B0FE1F /* Build configuration list for PBXNativeTarget "Server" */;
-			buildPhases = (
-				5F426D871B079E1600B0FE1F /* Sources */,
-				5F426D881B079E1600B0FE1F /* Frameworks */,
-				5F426D891B079E1600B0FE1F /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Server;
-			productName = Server;
-			productReference = 5F426D8B1B079E1600B0FE1F /* Server */;
-			productType = "com.apple.product-type.tool";
-		};
 		5F88DFC21B0330E6003495C3 /* Magikombat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F88DFE11B0330E6003495C3 /* Build configuration list for PBXNativeTarget "Magikombat" */;
@@ -267,8 +226,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				5F88E0801B034D38003495C3 /* PBXTargetDependency */,
-				5F88E0821B034D38003495C3 /* PBXTargetDependency */,
+				5F1C40511BC98C4E00034E2E /* PBXTargetDependency */,
+				5F1C40531BC98C4E00034E2E /* PBXTargetDependency */,
 			);
 			name = Magikombat;
 			productName = Magikombat;
@@ -281,12 +240,11 @@
 		5F88DFBB1B0330E6003495C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = P0ed;
 				TargetAttributes = {
-					5F426D8A1B079E1600B0FE1F = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
 					5F88DFC21B0330E6003495C3 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -305,31 +263,30 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5F88DFFF1B034D26003495C3 /* Products */;
-					ProjectRef = 5F88DFFE1B034D26003495C3 /* OpenEmu-SDK.xcodeproj */;
+					ProductGroup = 5F1C3FAF1BC9896E00034E2E /* Products */;
+					ProjectRef = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				5F88DFC21B0330E6003495C3 /* Magikombat */,
-				5F426D8A1B079E1600B0FE1F /* Server */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5F88E07C1B034D27003495C3 /* OpenEmuBase.framework */ = {
+		5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = OpenEmuBase.framework;
-			remoteRef = 5F88E07B1B034D27003495C3 /* PBXContainerItemProxy */;
+			remoteRef = 5F1C404A1BC9896E00034E2E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5F88E07E1B034D27003495C3 /* OpenEmuSystem.framework */ = {
+		5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = OpenEmuSystem.framework;
-			remoteRef = 5F88E07D1B034D27003495C3 /* PBXContainerItemProxy */;
+			remoteRef = 5F1C404C1BC9896E00034E2E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -339,60 +296,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F88DFCD1B0330E6003495C3 /* GameScene.sks in Resources */,
-				5F7208D71B04B982007702BA /* Controller-Database.plist in Resources */,
-				5F88DFCF1B0330E6003495C3 /* Images.xcassets in Resources */,
-				5F88DFD21B0330E6003495C3 /* MainMenu.xib in Resources */,
+				5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */,
+				5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */,
+				5F1C40401BC9896E00034E2E /* GameScene.sks in Resources */,
+				5F1C40141BC9896E00034E2E /* Controller-Database.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5F426D871B079E1600B0FE1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F426D8E1B079E1600B0FE1F /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F88DFBF1B0330E6003495C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F4BFFFE1B03E04300EBCC60 /* DeviceConfiguration.swift in Sources */,
-				5F4BFFFC1B03DFDC00EBCC60 /* EventsController.swift in Sources */,
-				5F7208D11B047A24007702BA /* DSExtensions.swift in Sources */,
-				5F426D841B07992B00B0FE1F /* TileMapGenerator.swift in Sources */,
-				5F426D941B079F4E00B0FE1F /* GameLevel.swift in Sources */,
-				5F7208CF1B03EF6F007702BA /* DeviceAction.swift in Sources */,
-				5F88DFCB1B0330E6003495C3 /* GameLevelScene.swift in Sources */,
-				5F426DA01B0A45A100B0FE1F /* TileMap.swift in Sources */,
-				5F88DFC91B0330E6003495C3 /* AppDelegate.swift in Sources */,
+				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
+				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
+				5F1C40461BC9896E00034E2E /* TileMap.swift in Sources */,
+				5F1C40451BC9896E00034E2E /* GameLevel.swift in Sources */,
+				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
+				5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */,
+				5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */,
+				5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */,
+				5F1C40471BC9896E00034E2E /* GameLevelScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5F88E0801B034D38003495C3 /* PBXTargetDependency */ = {
+		5F1C40511BC98C4E00034E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OpenEmuBase;
-			targetProxy = 5F88E07F1B034D38003495C3 /* PBXContainerItemProxy */;
+			targetProxy = 5F1C40501BC98C4E00034E2E /* PBXContainerItemProxy */;
 		};
-		5F88E0821B034D38003495C3 /* PBXTargetDependency */ = {
+		5F1C40531BC98C4E00034E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OpenEmuSystem;
-			targetProxy = 5F88E0811B034D38003495C3 /* PBXContainerItemProxy */;
+			targetProxy = 5F1C40521BC98C4E00034E2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5F88DFD01B0330E6003495C3 /* MainMenu.xib */ = {
+		5F1C3FA41BC9896E00034E2E /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5F88DFD11B0330E6003495C3 /* Base */,
+				5F1C3FA51BC9896E00034E2E /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -400,24 +349,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5F426D901B079E1600B0FE1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5F426D911B079E1600B0FE1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		5F88DFDF1B0330E6003495C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -439,6 +370,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -454,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -492,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -512,6 +444,8 @@
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
@@ -532,6 +466,8 @@
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
@@ -541,15 +477,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F426D8F1B079E1600B0FE1F /* Build configuration list for PBXNativeTarget "Server" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F426D901B079E1600B0FE1F /* Debug */,
-				5F426D911B079E1600B0FE1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5F88DFBE1B0330E6003495C3 /* Build configuration list for PBXProject "Magikombat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

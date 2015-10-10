@@ -2,13 +2,13 @@ import Foundation
 
 class DeviceAction<T> {
 
-	let action: SinkOf<T>
+	let action: (T) -> ()
 
 	init(_ action: (T) -> ()) {
-		self.action = SinkOf<T>(action)
+		self.action = action
 	}
 
 	func performAction(value: T) {
-		action.put(value)
+		action(value)
 	}
 }

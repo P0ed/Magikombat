@@ -18,7 +18,7 @@ struct TileMap {
 	}
 
 	var size: TileMap.Size
-	var tiles: Array<Array<Tile>>
+	var tiles: [[Tile]]
 
 	init() {
 		size = TileMap.Size(width: 0, height: 0)

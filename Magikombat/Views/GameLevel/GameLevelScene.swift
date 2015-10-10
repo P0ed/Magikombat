@@ -1,47 +1,26 @@
 import SpriteKit
+import Carbon.HIToolbox.Events
 
-class Model {
-
-	var positionSink: SinkOf<CGPoint>?
-	var position = CGPoint() { didSet { if let positionSink = self.positionSink { positionSink.put(self.position) } } }
-
-	func move() {
-		position.x += 100
-	}
-}
-
-class SpaceshipNode: SKSpriteNode {
-	let model = Model()
-
-	func positionSink() -> SinkOf<CGPoint> { return SinkOf() { [unowned self] newPosition in self.position = newPosition } }
-
-	deinit {
-		model.positionSink = nil
-	}
-}
 
 class GameLevelScene: SKScene {
 
-	var model: Model?
+	let spriteSize = 32
 
     override func didMoveToView(view: SKView) {
 
-		let sprite = SpaceshipNode(imageNamed:"Spaceship")
-		model = sprite.model
-
-		sprite.setScale(0.2)
-		model!.positionSink = sprite.positionSink()
-		self.addChild(sprite)
-
-		model!.position = CGPoint(x: self.size.width / 2.0, y: self.size.height / 2.0)
+		self.becomeFirstResponder()
 
 		let moveAction = DeviceAction<Bool>() { pressed in
 			if pressed {
-				self.model!.move()
+
 			}
 		}
 
 		appDelegate().eventsController.deviceConfiguration.buttonsMapTable = [DSButton.Cross: moveAction]
+		appDelegate().eventsController.deviceConfiguration.keyboardMapTable = [
+			Int(OEHIDEvent.keyCodeForVirtualKey(CGCharCode(kVK_ANSI_A))): moveAction,
+			Int(OEHIDEvent.keyCodeForVirtualKey(CGCharCode(kVK_ANSI_D))): moveAction
+		]
 
 		let tileMap = TileMapGenerator.generateTileMap()
 		let gameLevel = GameLevel(tileMap: tileMap)
@@ -49,12 +28,27 @@ class GameLevelScene: SKScene {
     }
     
     override func update(currentTime: CFTimeInterval) {
-		let vector = appDelegate().eventsController.rightJoystick
-		model!.position.x += CGFloat(vector.dx * 10)
-		model!.position.y += CGFloat(vector.dy * 10)
+//		let vector = appDelegate().eventsController.rightJoystick
+//		model!.position.x += CGFloat(vector.dx * 10)
+//		model!.position.y += CGFloat(vector.dy * 10)
     }
 
 	func loadGameLevel(gameLevel: GameLevel) {
-		
+
+		var row = 0
+		for tilesRow in gameLevel.tileMap.tiles {
+			var column = 0
+			for tile in tilesRow {
+
+				if tile.type == .Dirt {
+					let sprite = SKSpriteNode(imageNamed: "Dirt")
+					sprite.size = CGSize(width: spriteSize, height: spriteSize)
+					sprite.position = CGPoint(x: column * spriteSize + spriteSize / 2, y: row * spriteSize + spriteSize / 2)
+					self.addChild(sprite)
+				}
+				++column
+			}
+			++row
+		}
 	}
 }

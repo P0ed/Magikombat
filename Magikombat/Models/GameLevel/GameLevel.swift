@@ -2,7 +2,9 @@ import Foundation
 
 class GameLevel {
 
-	init(tileMap: TileMap) {
+	let tileMap: TileMap
 
+	init(tileMap: TileMap) {
+		self.tileMap = tileMap
 	}
 }
