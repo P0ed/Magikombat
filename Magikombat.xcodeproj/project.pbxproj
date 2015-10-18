@@ -14,7 +14,6 @@
 		5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
 		5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAB1BC9896E00034E2E /* EventsController.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40401BC9896E00034E2E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40051BC9896E00034E2E /* GameScene.sks */; settings = {ASSET_TAGS = (); }; };
 		5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40061BC9896E00034E2E /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */; settings = {ASSET_TAGS = (); }; };
 		5F1C40451BC9896E00034E2E /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400D1BC9896E00034E2E /* GameLevel.swift */; settings = {ASSET_TAGS = (); }; };
@@ -22,6 +21,15 @@
 		5F1C40471BC9896E00034E2E /* GameLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C40111BC9896E00034E2E /* GameLevelScene.swift */; settings = {ASSET_TAGS = (); }; };
 		5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */; };
 		5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */; };
+		5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C405F1BC99B4100034E2E /* MenuModel.swift */; settings = {ASSET_TAGS = (); }; };
+		5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F219DBE1BD02E7300CBB10F /* NavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		5F8FF21D1BD2978D00752515 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21C1BD2978D00752515 /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
+		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; settings = {ASSET_TAGS = (); }; };
+		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; settings = {ASSET_TAGS = (); }; };
+		5FFD37C11BD4397700DEC2AF /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */; settings = {ASSET_TAGS = (); }; };
+		5FFD37C21BD4397700DEC2AF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37C01BD4397700DEC2AF /* Result.framework */; settings = {ASSET_TAGS = (); }; };
+		5FFD37C31BD43C4300DEC2AF /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FFD37C41BD43C4300DEC2AF /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37C01BD4397700DEC2AF /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5F219DC71BD0315400CBB10F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5FFD37C31BD43C4300DEC2AF /* BrightFutures.framework in Embed Frameworks */,
+				5FFD37C41BD43C4300DEC2AF /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F1C3FA51BC9896E00034E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -66,7 +89,6 @@
 		5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "OpenEmu-SDK.xcodeproj"; sourceTree = "<group>"; };
 		5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F1C40041BC9896E00034E2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5F1C40051BC9896E00034E2E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F1C40061BC9896E00034E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F1C40071BC9896E00034E2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F1C40091BC9896E00034E2E /* PythonLevelGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonLevelGenerator.py; sourceTree = "<group>"; };
@@ -74,7 +96,15 @@
 		5F1C400D1BC9896E00034E2E /* GameLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
 		5F1C400E1BC9896E00034E2E /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
 		5F1C40111BC9896E00034E2E /* GameLevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevelScene.swift; sourceTree = "<group>"; };
+		5F1C405F1BC99B4100034E2E /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		5F219DB41BD021D700CBB10F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		5F219DBE1BD02E7300CBB10F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8FF21C1BD2978D00752515 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		5F8FF21E1BD2F00300752515 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
+		5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
+		5FFD37C01BD4397700DEC2AF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +112,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FFD37C11BD4397700DEC2AF /* BrightFutures.framework in Frameworks */,
 				5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */,
 				5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */,
+				5FFD37C21BD4397700DEC2AF /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +125,9 @@
 		5F1C3FA21BC9896E00034E2E /* Magikombat */ = {
 			isa = PBXGroup;
 			children = (
+				5F1C40561BC9907000034E2E /* System */,
 				5F1C3FA61BC9896E00034E2E /* GamepadKit */,
+				5F219DBD1BD02E4800CBB10F /* Navigation Controller */,
 				5F1C404F1BC9898C00034E2E /* Menu */,
 				5F1C404E1BC9898200034E2E /* LevelEditor */,
 				5F1C40081BC9896E00034E2E /* LevelKit */,
@@ -101,7 +135,6 @@
 				5F1C400F1BC9896E00034E2E /* Views */,
 				5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */,
 				5F1C3FA41BC9896E00034E2E /* MainMenu.xib */,
-				5F1C40051BC9896E00034E2E /* GameScene.sks */,
 				5F1C40061BC9896E00034E2E /* Images.xcassets */,
 				5F1C40071BC9896E00034E2E /* Info.plist */,
 			);
@@ -192,13 +225,43 @@
 		5F1C404F1BC9898C00034E2E /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				5F1C405F1BC99B4100034E2E /* MenuModel.swift */,
+				5F8FF21E1BD2F00300752515 /* MenuScene.swift */,
+				5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		5F1C40561BC9907000034E2E /* System */ = {
+			isa = PBXGroup;
+			children = (
+				5FFD37BE1BD4397700DEC2AF /* Futures */,
+				5F1C40611BC9A79D00034E2E /* Utilities */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		5F1C40611BC9A79D00034E2E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5F8FF21C1BD2978D00752515 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5F219DBD1BD02E4800CBB10F /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F219DBE1BD02E7300CBB10F /* NavigationController.swift */,
+			);
+			name = "Navigation Controller";
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		5F88DFBA1B0330E6003495C3 = {
 			isa = PBXGroup;
 			children = (
+				5F219DB41BD021D700CBB10F /* Cartfile */,
 				5F1C3FA21BC9896E00034E2E /* Magikombat */,
 				5F88DFC41B0330E6003495C3 /* Products */,
 			);
@@ -212,6 +275,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5FFD37BE1BD4397700DEC2AF /* Futures */ = {
+			isa = PBXGroup;
+			children = (
+				5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */,
+				5FFD37C01BD4397700DEC2AF /* Result.framework */,
+			);
+			path = Futures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +294,8 @@
 				5F88DFBF1B0330E6003495C3 /* Sources */,
 				5F88DFC01B0330E6003495C3 /* Frameworks */,
 				5F88DFC11B0330E6003495C3 /* Resources */,
+				5F219DC21BD0306200CBB10F /* ShellScript */,
+				5F219DC71BD0315400CBB10F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,23 +372,43 @@
 			files = (
 				5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */,
 				5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */,
-				5F1C40401BC9896E00034E2E /* GameScene.sks in Resources */,
 				5F1C40141BC9896E00034E2E /* Controller-Database.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F219DC21BD0306200CBB10F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F88DFBF1B0330E6003495C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */,
 				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
 				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
 				5F1C40461BC9896E00034E2E /* TileMap.swift in Sources */,
 				5F1C40451BC9896E00034E2E /* GameLevel.swift in Sources */,
+				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
+				5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */,
+				5F8FF21D1BD2978D00752515 /* Utilities.swift in Sources */,
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
+				5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */,
 				5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */,
 				5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */,
 				5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */,
@@ -435,15 +529,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Magikombat/**",
+					"$(PROJECT_DIR)/Magikombat/System/Futures",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/Magikombat/**",
 				);
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Magikombat/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,15 +554,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Magikombat/**",
+					"$(PROJECT_DIR)/Magikombat/System/Futures",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/Magikombat/**",
 				);
 				INFOPLIST_FILE = Magikombat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Magikombat/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

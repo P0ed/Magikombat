@@ -2,7 +2,7 @@ import Foundation
 
 class EventsController {
 
-	var deviceConfiguration = DeviceConfiguration()
+	lazy var deviceConfiguration = DeviceConfiguration()
 
 	var leftJoystick = DSVector.zeroVector
 	var rightJoystick = DSVector.zeroVector
@@ -42,7 +42,7 @@ class EventsController {
 				self.hatDirection = hatDirection
 
 				func performActions(buttons: [DSHatDirection], pressed: Bool) {
-					for button in buttons {
+					buttons.forEach { button in
 						if let action = deviceConfiguration.dPadMapTable[button] {
 							action.performAction(pressed)
 						}
