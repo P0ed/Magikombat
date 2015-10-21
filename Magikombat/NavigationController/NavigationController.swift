@@ -1,5 +1,6 @@
 import Foundation
 import SpriteKit
+import BrightFutures
 
 class NavigationController {
 	var sceneStack: [SKScene] = []
@@ -33,19 +34,44 @@ class NavigationController {
 }
 
 /// Menus and Alerts extension
-//extension NavigationController {
-//	func showMenu(model: MenuModel) -> Promise<MenuResult, FlowError> {
-//		return SignalProducer(error: FlowError.Nothing)
-//	}
-//
-//	func showAlert<T>() -> Promise<T, FlowError> {
-//		return SignalProducer(error: FlowError.Nothing)
-//	}
-//}
+extension NavigationController {
+	func showMenu(model: MenuModel) -> Future<MenuResult, FlowError> {
+		return Future(error: FlowError.Nothing)
+	}
+
+	func showAlert<T>() -> Future<T, FlowError> {
+		return Future(error: FlowError.Nothing)
+	}
+
+	func resolveMenu(scene: MenuScene) {
+		scene.resolve().map {
+			switch $0 {
+			case let .Route(segue):
+				self.performSegue(segue)
+			case let .Menu(model):
+				self.pushScene(MenuScene(size: self.view.bounds.size, model: model))
+			}
+		}.onFailure {
+			_ in
+			popScene()
+		}
+	}
+}
 
 /// Routing extension
 extension NavigationController {
 	func showMainMenu() {
-		pushScene(MenuScene(size: view.bounds.size, model: MenuModel.mainMenuModel))
+		let model = MenuModel.mainMenuModel
+		let scene = MenuScene(size: view.bounds.size, model: model)
+		pushScene(scene)
+		resolveMenu(scene)
+	}
+
+	func performSegue(segue: Segue) {
+		switch segue {
+		case .NewGame:
+			let scene = PlanetScene()
+			pushScene(scene)
+		}
 	}
 }

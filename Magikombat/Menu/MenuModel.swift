@@ -2,7 +2,6 @@ import Foundation
 import BrightFutures
 
 enum MenuResult {
-	case Nothing
 	case Menu(MenuModel)
 	case Route(Segue)
 }

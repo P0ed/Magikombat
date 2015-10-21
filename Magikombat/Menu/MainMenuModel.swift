@@ -5,13 +5,13 @@ extension MenuModel {
 	static let mainMenuModel: MenuModel = {
 		let items = [
 			MenuItem(title: "New game") {
-				return Future(value: MenuResult.Nothing)
+				return Future(value: .Route(.NewGame))
 			},
 			MenuItem(title: "Options") {
-				return Future(value: MenuResult.Nothing)
+				return Future(error: .Nothing)
 			},
 			MenuItem(title: "Quit game") {
-				return Future(value: MenuResult.Nothing)
+				return Future(error: .Nothing)
 			}
 		]
 		return MenuModel.Plain(items: items)

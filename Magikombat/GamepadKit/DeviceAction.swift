@@ -16,10 +16,7 @@ class DeviceAction {
 class PressAction: DeviceAction {
 	init(_ pressAction: () -> ()) {
 		super.init {
-			pressed in
-			if pressed {
-				pressAction()
-			}
+			if $0 { pressAction() }
 		}
 	}
 }
