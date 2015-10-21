@@ -1,6 +1,6 @@
 import Foundation
 
-class GameLevel {
+class PlanetLevel {
 
 	let tileMap: TileMap
 

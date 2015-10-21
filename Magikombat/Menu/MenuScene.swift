@@ -1,9 +1,12 @@
 import Foundation
 import SpriteKit
+import BrightFutures
 
 class MenuScene: SKScene {
 
 	let model: MenuModel
+	let promise: Promise<MenuResult, FlowError>
+
 	var labels: [SKLabelNode] = []
 	var selectedIndex: Int? {
 		didSet {
@@ -16,19 +19,42 @@ class MenuScene: SKScene {
 		}
 	}
 
-	var deviceConfiguration = DeviceConfiguration()
+	lazy var deviceConfiguration: DeviceConfiguration = {
+		return DeviceConfiguration(
+			buttonsMapTable: [
+				.Cross: PressAction(self.pressItem),
+				.Circle: PressAction(self.escape)
+			],
+			dPadMapTable: [
+				.North: PressAction(self.selectPreviousItem),
+				.South: PressAction(self.selectNextItem)
+			],
+			keyboardMapTable: [
+				DeviceConfiguration.keyCodeForVirtualKey(kVK_UpArrow): PressAction(self.selectPreviousItem),
+				DeviceConfiguration.keyCodeForVirtualKey(kVK_DownArrow): PressAction(self.selectNextItem),
+				DeviceConfiguration.keyCodeForVirtualKey(kVK_Return): PressAction(self.pressItem),
+				DeviceConfiguration.keyCodeForVirtualKey(kVK_Delete): PressAction(self.escape)
+			]
+		)
+	}()
 
 	init(size: CGSize, model: MenuModel) {
 		self.model = model
+		promise = Promise()
 
 		super.init(size: size)
 
-		setupDeviceConfiguration()
+		scaleMode = .ResizeFill
+
 		setupItems()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 	    fatalError("init(coder:) has not been implemented")
+	}
+
+	func resolve() -> Future<MenuResult, FlowError> {
+		return promise.future
 	}
 
 	override func becomeFirstResponder() -> Bool {
@@ -39,28 +65,6 @@ class MenuScene: SKScene {
 	override func didChangeSize(oldSize: CGSize) {
 		super.didChangeSize(oldSize)
 		layoutItems()
-	}
-
-	func setupDeviceConfiguration() {
-		deviceConfiguration.dPadAction = DeviceAction {
-			[unowned self] hatDirection in
-
-			switch hatDirection {
-			case .North: self.selectPreviousItem()
-			case .South: self.selectNextItem()
-			default: break
-			}
-		}
-		deviceConfiguration.keyboardMapTable = [
-			DeviceConfiguration.keyCodeForVirtualKey(kVK_UpArrow): DeviceAction {
-				[unowned self] pressed in
-				if pressed { self.selectPreviousItem() }
-			},
-			DeviceConfiguration.keyCodeForVirtualKey(kVK_DownArrow): DeviceAction {
-				[unowned self] pressed in
-				if pressed { self.selectNextItem() }
-			}
-		]
 	}
 
 	func setupItems() {
@@ -109,13 +113,12 @@ class MenuScene: SKScene {
 	func pressItem() {
 		switch model {
 		case let .Plain(items):
-			let item = items[selectedIndex!]
-			item.action()
+			items[selectedIndex!].action().map(self.promise.success)
 		}
 	}
 
 	func escape() {
-
+		promise.failure(.Nothing)
 	}
 
 	/// FIXME: Убрать куда-нибудь (фиксит звук непохендленной клавиатуры)

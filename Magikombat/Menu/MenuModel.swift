@@ -4,6 +4,7 @@ import BrightFutures
 enum MenuResult {
 	case Nothing
 	case Menu(MenuModel)
+	case Route(Segue)
 }
 
 class MenuItem {

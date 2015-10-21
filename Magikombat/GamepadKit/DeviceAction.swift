@@ -1,14 +1,25 @@
 import Foundation
 
-class DeviceAction<T> {
+class DeviceAction {
 
-	let action: (T) -> ()
+	let action: (Bool) -> ()
 
-	init(_ action: (T) -> ()) {
+	init(_ action: (Bool) -> ()) {
 		self.action = action
 	}
 
-	func performAction(value: T) {
+	func performAction(value: Bool) {
 		action(value)
+	}
+}
+
+class PressAction: DeviceAction {
+	init(_ pressAction: () -> ()) {
+		super.init {
+			pressed in
+			if pressed {
+				pressAction()
+			}
+		}
 	}
 }

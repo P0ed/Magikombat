@@ -2,9 +2,6 @@ import Foundation
 
 class TileMapGenerator {
 
-	struct Room {
-	}
-
 	static func generateTileMap() -> TileMap {
 
 		var tileMap = TileMap()
@@ -18,18 +15,4 @@ class TileMapGenerator {
 
 		return tileMap
 	}
-
-	static func generateRooms() -> [Room] {
-		return []
-	}
-
-	static func fillRoom(room: Room) {}
-
-	static func setupFloor(room: Room) {}
-
-	static func setupRandomWalls(room: Room) {}
-
-	static func setupRequiredWalls(room: Room) {}
-
-	static func setupLadders(room: TileMap) {}
 }

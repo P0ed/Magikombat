@@ -2,7 +2,7 @@ import Foundation
 
 class EventsController {
 
-	lazy var deviceConfiguration = DeviceConfiguration()
+	lazy var deviceConfiguration = DeviceConfiguration(buttonsMapTable: [:], dPadMapTable: [:], keyboardMapTable: [:])
 
 	var leftJoystick = DSVector.zeroVector
 	var rightJoystick = DSVector.zeroVector
@@ -51,10 +51,6 @@ class EventsController {
 
 				performActions(buttons.up, pressed: false)
 				performActions(buttons.down, pressed: true)
-
-				if let action = deviceConfiguration.dPadAction {
-					action.performAction(hatDirection)
-				}
 			}
 		case OEHIDEventTypeKeyboard.rawValue:
 			if let action = deviceConfiguration.keyboardMapTable[Int(event.keycode)] {
