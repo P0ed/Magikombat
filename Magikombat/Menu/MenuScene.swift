@@ -20,7 +20,7 @@ class MenuScene: SKScene {
 	}
 
 	lazy var deviceConfiguration: DeviceConfiguration = {
-		return DeviceConfiguration(
+		DeviceConfiguration(
 			buttonsMapTable: [
 				.Cross: PressAction(self.pressItem),
 				.Circle: PressAction(self.escape)
@@ -73,7 +73,7 @@ class MenuScene: SKScene {
 			self.removeChildrenInArray(labels)
 
 			labels = items.map {
-				return SKLabelNode(text: $0.title)
+				SKLabelNode(text: $0.title)
 			}
 			labels.forEach(self.addChild)
 
