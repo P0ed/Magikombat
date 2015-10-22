@@ -19,6 +19,8 @@ class TileMapGenerator {
 
 class DiamondSquareAlgorithm {
 
+	var map: [[Int]] = []
+
 	/**
 	* This method uses the seed value to initialize the four corners of the
 	* map. The variation creates randomness in the map. The size of the array
@@ -34,13 +36,13 @@ class DiamondSquareAlgorithm {
 	* @return a height map in the form of a 2-dimensional array containing
 	*         integer values or null if the arguments are out of range
 	*/
-	static func makeHeightMap(iterations: Int, seed: Int, var variation: Int) -> [[Int]] {
+	func makeHeightMap(iterations: Int, seed: Int, var variation: Int) -> [[Int]] {
 		guard iterations > 0 && variation >= 0 else {
-			return [[]];
+			return [];
 		}
 
 		var size = (1 << iterations) + 1
-		var map = Array(count: size, repeatedValue: Array(count:size, repeatedValue:0))
+		map = Array(count: size, repeatedValue: Array(count:size, repeatedValue:0))
 		let maxIndex = map.endIndex
 
 		map[0][0] = seed;
@@ -82,7 +84,7 @@ class DiamondSquareAlgorithm {
 	* @param variation
 	*            the randomness in the height map
 	*/
-	private static func diamondStep(minCoordinate: Int, _ size: Int, inout _ map: [[Int]], _ variation: Int) {
+	private func diamondStep(minCoordinate: Int, _ size: Int, inout _ map: [[Int]], _ variation: Int) {
 
 	}
 
@@ -102,7 +104,7 @@ class DiamondSquareAlgorithm {
 	* @param variation
 	*            the randomness in the height map
 	*/
-	private static func squareStepEven(minCoordinate: Int, inout _ map: [[Int]], _ size: Int, _ maxIndex: Int, _ variation: Int) {
+	private func squareStepEven(minCoordinate: Int, inout _ map: [[Int]], _ size: Int, _ maxIndex: Int, _ variation: Int) {
 
 	}
 
@@ -122,7 +124,7 @@ class DiamondSquareAlgorithm {
 	* @param variation
 	*            the randomness in the height map
 	*/
-	private static func squareStepOdd(inout map: [[Int]], _ size: Int, _ minCoordinate: Int, _ maxIndex: Int, _ variation: Int) {
+	private func squareStepOdd(inout map: [[Int]], _ size: Int, _ minCoordinate: Int, _ maxIndex: Int, _ variation: Int) {
 
 	}
 
@@ -147,7 +149,7 @@ class DiamondSquareAlgorithm {
 	* @param y
 	*            the y-coordinate of the place to fill
 	*/
-	private static func calculateAndInsertAverage(val1: Int, val2: Int, val3: Int, val4: Int, variation: Int, map: [[Int]], x: Int, y: Int) {
+	private func calculateAndInsertAverage(val1: Int, val2: Int, val3: Int, val4: Int, variation: Int, map: [[Int]], x: Int, y: Int) {
 
 	}
 }
