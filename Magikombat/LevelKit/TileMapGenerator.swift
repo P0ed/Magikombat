@@ -8,17 +8,26 @@ class TileMapGenerator {
 		var tileMap = TileMap()
 		tileMap.size = TileMap.Size(width: 32, height:32)
 
-		let dsa = DiamondSquareAlgorithm(seed: 1)
+		let dsa = DiamondSquareAlgorithm()
 		let heightMap = dsa.makeHeightMap(5, variation: 14)
 
 		tileMap.tiles = (0 ..< tileMap.size.width).map { x in
 			return (0 ..< tileMap.size.height).map { y in
 				let height = heightMap[x][y]
-				return Tile(type: height > 2 ? .Dirt : (height < -2 ? .Sand : .Arid))
+				return Tile(type: tileTypeFromHeight(height))
 			}
 		}
 
 		return tileMap
+	}
+
+	static func tileTypeFromHeight(height: Int) -> TileType {
+		switch height {
+		case _ where height < -7: return .Water
+		case -7...0: return .Sand
+		case 1...5: return .Arid
+		default: return .Dirt
+		}
 	}
 }
 
@@ -26,6 +35,10 @@ class DiamondSquareAlgorithm {
 
 	var map: [[Int]] = []
 	let random: GKARC4RandomSource
+
+	init() {
+		random = GKARC4RandomSource()
+	}
 
 	init(seed: Int) {
 		var seedValue = seed.value
