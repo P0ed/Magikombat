@@ -1,7 +1,8 @@
 import Foundation
 
 enum TileType {
-	case None
+	case Sand
+	case Arid
 	case Dirt
 }
 

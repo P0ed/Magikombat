@@ -2,10 +2,9 @@ import Foundation
 import SpriteKit
 import BrightFutures
 
-class MenuScene: SKScene {
+class MenuScene: BaseScene {
 
 	let model: MenuModel
-	let promise: Promise<MenuResult, FlowError>
 
 	var labels: [SKLabelNode] = []
 	var selectedIndex: Int? {
@@ -40,7 +39,6 @@ class MenuScene: SKScene {
 
 	init(size: CGSize, model: MenuModel) {
 		self.model = model
-		promise = Promise()
 
 		super.init(size: size)
 
@@ -51,10 +49,6 @@ class MenuScene: SKScene {
 
 	required init?(coder aDecoder: NSCoder) {
 	    fatalError("init(coder:) has not been implemented")
-	}
-
-	func resolve() -> Future<MenuResult, FlowError> {
-		return promise.future
 	}
 
 	override func becomeFirstResponder() -> Bool {
@@ -113,16 +107,14 @@ class MenuScene: SKScene {
 	func pressItem() {
 		switch model {
 		case let .Plain(items):
-			items[selectedIndex!].action().map(self.promise.success)
+			items[selectedIndex!].action().map(self.promise!.success)
 		}
 	}
 
 	func escape() {
-		promise.failure(.Nothing)
+		promise!.failure(.Nothing)
 	}
 
 	/// FIXME: Убрать куда-нибудь (фиксит звук непохендленной клавиатуры)
-	override func keyDown(theEvent: NSEvent) {
-
-	}
+	override func keyDown(theEvent: NSEvent) {}
 }

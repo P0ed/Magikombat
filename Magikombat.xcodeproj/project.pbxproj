@@ -23,6 +23,7 @@
 		5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */; };
 		5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C405F1BC99B4100034E2E /* MenuModel.swift */; };
 		5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F219DBE1BD02E7300CBB10F /* NavigationController.swift */; };
+		5F4FB5181BDAE6BE00F19CD8 /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FB5171BDAE6BE00F19CD8 /* BaseScene.swift */; };
 		5F77C3DB1BDA69D20059B69F /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; };
 		5F77C3DC1BDA69D20059B69F /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */; };
@@ -79,6 +80,7 @@
 		5F219DB41BD021D700CBB10F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F219DBE1BD02E7300CBB10F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		5F4FB5161BDAA38F00F19CD8 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
+		5F4FB5171BDAE6BE00F19CD8 /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
 		5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
 		5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
 		5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				5F219DBE1BD02E7300CBB10F /* NavigationController.swift */,
 				5FA9F21C1BD7EE2400183A56 /* Router.swift */,
+				5F4FB5171BDAE6BE00F19CD8 /* BaseScene.swift */,
 			);
 			name = "Navigation Controller";
 			path = NavigationController;
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */,
+				5F4FB5181BDAE6BE00F19CD8 /* BaseScene.swift in Sources */,
 				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
 				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
 				5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */,

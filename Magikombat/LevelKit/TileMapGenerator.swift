@@ -6,11 +6,15 @@ class TileMapGenerator {
 	static func generateTileMap() -> TileMap {
 
 		var tileMap = TileMap()
-		tileMap.size = TileMap.Size(width: 30, height:10)
+		tileMap.size = TileMap.Size(width: 32, height:32)
 
-		tileMap.tiles = (0..<tileMap.size.height).map { rowIndex in
-			return (0..<tileMap.size.width).map { tileIndex in
-				return Tile(type: rowIndex == 0 ? TileType.Dirt : TileType.None)
+		let dsa = DiamondSquareAlgorithm(seed: 1)
+		let heightMap = dsa.makeHeightMap(5, variation: 14)
+
+		tileMap.tiles = (0 ..< tileMap.size.width).map { x in
+			return (0 ..< tileMap.size.height).map { y in
+				let height = heightMap[x][y]
+				return Tile(type: height > 2 ? .Dirt : (height < -2 ? .Sand : .Arid))
 			}
 		}
 

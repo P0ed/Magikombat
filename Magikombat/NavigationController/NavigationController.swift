@@ -3,8 +3,8 @@ import SpriteKit
 import BrightFutures
 
 class NavigationController {
-	var sceneStack: [SKScene] = []
-	var modalScene: SKScene?
+	var sceneStack: [BaseScene] = []
+	var modalScene: BaseScene?
 
 	let view: SKView
 
@@ -12,7 +12,7 @@ class NavigationController {
 		self.view = view
 	}
 
-	func presentModalScene(scene: SKScene) throws {
+	func presentModalScene(scene: BaseScene) throws {
 		if modalScene == nil {
 			modalScene = scene
 		} else {
@@ -20,30 +20,21 @@ class NavigationController {
 		}
 	}
 
-	func pushScene(scene: SKScene) {
+	func pushScene(scene: BaseScene) {
 		sceneStack.append(scene)
-		view.presentScene(scene)
-		view.window?.makeFirstResponder(scene)
+		showScene(scene)
 	}
 
-	func popScene() -> SKScene? {
-		let scene = sceneStack.popLast()
-		view.presentScene(sceneStack.last)
+	func popScene() -> BaseScene? {
+		let scene = sceneStack.count > 1 ? sceneStack.popLast() : nil
+		showScene(sceneStack.last!)
 		return scene
 	}
-}
 
-/// Menus and Alerts extension
-extension NavigationController {
-	func showMenu(model: MenuModel) -> Future<MenuResult, FlowError> {
-		return Future(error: FlowError.Nothing)
-	}
+	func showScene(scene: BaseScene) {
+		view.presentScene(scene)
+		view.window?.makeFirstResponder(scene)
 
-	func showAlert<T>() -> Future<T, FlowError> {
-		return Future(error: FlowError.Nothing)
-	}
-
-	func resolveMenu(scene: MenuScene) {
 		scene.resolve().map {
 			switch $0 {
 			case let .Route(segue):
@@ -51,10 +42,20 @@ extension NavigationController {
 			case let .Menu(model):
 				self.pushScene(MenuScene(size: self.view.bounds.size, model: model))
 			}
-		}.onFailure {
-			_ in
-			self.popScene()
+			}.onFailure { _ in
+				self.popScene()
 		}
+	}
+}
+
+/// Menus and Alerts extension
+extension NavigationController {
+	func showMenu(model: MenuModel) -> Future<SceneResult, FlowError> {
+		return Future(error: FlowError.Nothing)
+	}
+
+	func showAlert<T>() -> Future<T, FlowError> {
+		return Future(error: FlowError.Nothing)
 	}
 }
 
@@ -64,7 +65,6 @@ extension NavigationController {
 		let model = MenuModel.mainMenuModel
 		let scene = MenuScene(size: view.bounds.size, model: model)
 		pushScene(scene)
-		resolveMenu(scene)
 	}
 
 	func performSegue(segue: Segue) {

@@ -1,16 +1,16 @@
 import Foundation
 import BrightFutures
 
-enum MenuResult {
+enum SceneResult {
 	case Menu(MenuModel)
 	case Route(Segue)
 }
 
 class MenuItem {
 	let title: String
-	let action: () -> Future<MenuResult, FlowError>
+	let action: () -> Future<SceneResult, FlowError>
 
-	init(title: String, action: () -> Future<MenuResult, FlowError>) {
+	init(title: String, action: () -> Future<SceneResult, FlowError>) {
 		self.title = title
 		self.action = action
 	}
