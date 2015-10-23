@@ -32,14 +32,14 @@ enum DSTrigger {
 
 enum DSHatDirection: Int {
 	case Null		= 0
-	case North		= 1
-	case East		= 2
-	case South		= 4
-	case West		= 8
-	case NorthEast	= 3
-	case SouthEast	= 6
-	case NorthWest	= 9
-	case SouthWest	= 12
+	case Up			= 1
+	case Right		= 2
+	case Down		= 4
+	case Left		= 8
+	case UpRight	= 3
+	case DownRight	= 6
+	case UpLeft		= 9
+	case DownLeft	= 12
 }
 
 enum DSControl {

@@ -26,8 +26,8 @@ class MenuScene: SKScene {
 				.Circle: PressAction(self.escape)
 			],
 			dPadMapTable: [
-				.North: PressAction(self.selectPreviousItem),
-				.South: PressAction(self.selectNextItem)
+				.Up: PressAction(self.selectPreviousItem),
+				.Down: PressAction(self.selectNextItem)
 			],
 			keyboardMapTable: [
 				DeviceConfiguration.keyCodeForVirtualKey(kVK_UpArrow): PressAction(self.selectPreviousItem),

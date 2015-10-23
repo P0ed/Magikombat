@@ -91,6 +91,22 @@ class EventsController {
 }
 
 func changedStateDPadButtons(previous: DSHatDirection, current: DSHatDirection) -> (up: [DSHatDirection], down: [DSHatDirection]) {
+	var up: [DSHatDirection] = []
+	var down: [DSHatDirection] = []
 
-	return ([], [])
+	for i in 0...3 {
+		let bit = 1 << i
+		let was = previous.rawValue & bit
+		let now = current.rawValue & bit
+
+		if was != now {
+			if was != 0 {
+				up.append(DSHatDirection(rawValue: bit)!)
+			} else {
+				down.append(DSHatDirection(rawValue: bit)!)
+			}
+		}
+	}
+
+	return (up, down)
 }
