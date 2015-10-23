@@ -22,6 +22,8 @@ class PlanetScene: BaseScene {
 
 	override func didMoveToView(view: SKView) {
 		if level == nil {
+			scaleMode = .ResizeFill
+
 			let tileMap = TileMapGenerator.generateTileMap()
 			level = PlanetLevel(tileMap: tileMap)
 
@@ -29,7 +31,7 @@ class PlanetScene: BaseScene {
 			addChild(world)
 
 			let camera = SKCameraNode()
-			camera.position = CGPoint(x: 128, y: 128)
+			camera.position = CGPoint(x: 256, y: 256)
 			addChild(camera)
 			self.camera = camera
 
