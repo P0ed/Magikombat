@@ -76,8 +76,9 @@
 		5F1C40071BC9896E00034E2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMapGenerator.swift; sourceTree = "<group>"; };
 		5F1C405F1BC99B4100034E2E /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
-		5F219DB41BD021D700CBB10F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		5F219DB41BD021D700CBB10F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F219DBE1BD02E7300CBB10F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		5F4FB5161BDAA38F00F19CD8 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
 		5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
 		5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
 		5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
@@ -189,6 +190,8 @@
 		5F77C3B81BDA66100059B69F /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				5F219DB41BD021D700CBB10F /* Cartfile */,
+				5F4FB5161BDAA38F00F19CD8 /* Cartfile.resolved */,
 				5F77C3B91BDA66620059B69F /* Mac */,
 			);
 			path = Carthage;
@@ -210,7 +213,6 @@
 		5F88DFBA1B0330E6003495C3 = {
 			isa = PBXGroup;
 			children = (
-				5F219DB41BD021D700CBB10F /* Cartfile */,
 				5F77C3B81BDA66100059B69F /* Carthage */,
 				5F1C3FA21BC9896E00034E2E /* Magikombat */,
 				5F88DFC41B0330E6003495C3 /* Products */,
