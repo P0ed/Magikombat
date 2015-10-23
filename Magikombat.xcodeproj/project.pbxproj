@@ -7,74 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB111BD6C022006A9125 /* PlanetScene.swift */; settings = {ASSET_TAGS = (); }; };
-		5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB131BD6C02B006A9125 /* BattleScene.swift */; settings = {ASSET_TAGS = (); }; };
-		5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB151BD6C052006A9125 /* SpaceScene.swift */; settings = {ASSET_TAGS = (); }; };
-		5F17AB191BD6C128006A9125 /* PlanetLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB171BD6C128006A9125 /* PlanetLevel.swift */; settings = {ASSET_TAGS = (); }; };
-		5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB181BD6C128006A9125 /* TileMap.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA41BC9896E00034E2E /* MainMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		5F1C40141BC9896E00034E2E /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA71BC9896E00034E2E /* Controller-Database.plist */; settings = {ASSET_TAGS = (); }; };
-		5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA81BC9896E00034E2E /* DeviceAction.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAB1BC9896E00034E2E /* EventsController.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40061BC9896E00034E2E /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */; settings = {ASSET_TAGS = (); }; };
-		5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */; };
-		5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */; };
-		5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C405F1BC99B4100034E2E /* MenuModel.swift */; settings = {ASSET_TAGS = (); }; };
-		5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F219DBE1BD02E7300CBB10F /* NavigationController.swift */; settings = {ASSET_TAGS = (); }; };
-		5F8FF21D1BD2978D00752515 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21C1BD2978D00752515 /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
-		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; settings = {ASSET_TAGS = (); }; };
-		5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9F21C1BD7EE2400183A56 /* Router.swift */; settings = {ASSET_TAGS = (); }; };
-		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; settings = {ASSET_TAGS = (); }; };
-		5FFD37C11BD4397700DEC2AF /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */; settings = {ASSET_TAGS = (); }; };
-		5FFD37C21BD4397700DEC2AF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37C01BD4397700DEC2AF /* Result.framework */; settings = {ASSET_TAGS = (); }; };
-		5FFD37C31BD43C4300DEC2AF /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5FFD37C41BD43C4300DEC2AF /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFD37C01BD4397700DEC2AF /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB111BD6C022006A9125 /* PlanetScene.swift */; };
+		5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB131BD6C02B006A9125 /* BattleScene.swift */; };
+		5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB151BD6C052006A9125 /* SpaceScene.swift */; };
+		5F17AB191BD6C128006A9125 /* PlanetLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB171BD6C128006A9125 /* PlanetLevel.swift */; };
+		5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB181BD6C128006A9125 /* TileMap.swift */; };
+		5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */; };
+		5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA41BC9896E00034E2E /* MainMenu.xib */; };
+		5F1C40141BC9896E00034E2E /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA71BC9896E00034E2E /* Controller-Database.plist */; };
+		5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA81BC9896E00034E2E /* DeviceAction.swift */; };
+		5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */; };
+		5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */; };
+		5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FAB1BC9896E00034E2E /* EventsController.swift */; };
+		5F1C40411BC9896E00034E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C40061BC9896E00034E2E /* Images.xcassets */; };
+		5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */; };
+		5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C405F1BC99B4100034E2E /* MenuModel.swift */; };
+		5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F219DBE1BD02E7300CBB10F /* NavigationController.swift */; };
+		5F77C3DB1BDA69D20059B69F /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; };
+		5F77C3DC1BDA69D20059B69F /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */; };
+		5F77C3DE1BDA69D20059B69F /* OpenEmuBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F77C3DF1BDA69D20059B69F /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */; };
+		5F77C3E01BDA69D20059B69F /* OpenEmuSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CA1BDA69BA0059B69F /* Result.framework */; };
+		5F77C3E21BDA69D20059B69F /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CA1BDA69BA0059B69F /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CB1BDA69BA0059B69F /* Runes.framework */; };
+		5F77C3E41BDA69D20059B69F /* Runes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CB1BDA69BA0059B69F /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F77C3E71BDA715D0059B69F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F77C3E61BDA715D0059B69F /* Utilities.swift */; };
+		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; };
+		5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9F21C1BD7EE2400183A56 /* Router.swift */; };
+		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5F1C404A1BC9896E00034E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6772A261710A4BA00ED580A;
-			remoteInfo = OpenEmuBase;
-		};
-		5F1C404C1BC9896E00034E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6772A8C1710CD7E00ED580A;
-			remoteInfo = OpenEmuSystem;
-		};
-		5F1C40501BC98C4E00034E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C6772A251710A4BA00ED580A;
-			remoteInfo = OpenEmuBase;
-		};
-		5F1C40521BC98C4E00034E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C6772A8B1710CD7E00ED580A;
-			remoteInfo = OpenEmuSystem;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		5F219DC71BD0315400CBB10F /* Embed Frameworks */ = {
+		5F77C3E51BDA69D20059B69F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5FFD37C31BD43C4300DEC2AF /* BrightFutures.framework in Embed Frameworks */,
-				5FFD37C41BD43C4300DEC2AF /* Result.framework in Embed Frameworks */,
+				5F77C3DC1BDA69D20059B69F /* BrightFutures.framework in Embed Frameworks */,
+				5F77C3E01BDA69D20059B69F /* OpenEmuSystem.framework in Embed Frameworks */,
+				5F77C3DE1BDA69D20059B69F /* OpenEmuBase.framework in Embed Frameworks */,
+				5F77C3E41BDA69D20059B69F /* Runes.framework in Embed Frameworks */,
+				5F77C3E21BDA69D20059B69F /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +70,6 @@
 		5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
 		5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
 		5F1C3FAB1BC9896E00034E2E /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "OpenEmu-SDK.xcodeproj"; sourceTree = "<group>"; };
 		5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F1C40041BC9896E00034E2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F1C40061BC9896E00034E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -103,13 +78,16 @@
 		5F1C405F1BC99B4100034E2E /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		5F219DB41BD021D700CBB10F /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5F219DBE1BD02E7300CBB10F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
+		5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
+		5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
+		5F77C3CA1BDA69BA0059B69F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		5F77C3CB1BDA69BA0059B69F /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
+		5F77C3E61BDA715D0059B69F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F8FF21C1BD2978D00752515 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5F8FF21E1BD2F00300752515 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		5FA9F21C1BD7EE2400183A56 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
-		5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
-		5FFD37C01BD4397700DEC2AF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +95,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FFD37C11BD4397700DEC2AF /* BrightFutures.framework in Frameworks */,
-				5F1C40541BC98C5D00034E2E /* OpenEmuBase.framework in Frameworks */,
-				5F1C40551BC98C5D00034E2E /* OpenEmuSystem.framework in Frameworks */,
-				5FFD37C21BD4397700DEC2AF /* Result.framework in Frameworks */,
+				5F77C3DB1BDA69D20059B69F /* BrightFutures.framework in Frameworks */,
+				5F77C3DF1BDA69D20059B69F /* OpenEmuSystem.framework in Frameworks */,
+				5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */,
+				5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */,
+				5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,28 +131,10 @@
 				5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */,
 				5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */,
 				5F1C3FAB1BC9896E00034E2E /* EventsController.swift */,
-				5F1C3FAC1BC9896E00034E2E /* OpenEmu-SDK */,
 				5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */,
 				5F1C40041BC9896E00034E2E /* README.md */,
 			);
 			path = GamepadKit;
-			sourceTree = "<group>";
-		};
-		5F1C3FAC1BC9896E00034E2E /* OpenEmu-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */,
-			);
-			path = "OpenEmu-SDK";
-			sourceTree = "<group>";
-		};
-		5F1C3FAF1BC9896E00034E2E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */,
-				5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5F1C40081BC9896E00034E2E /* LevelKit */ = {
@@ -210,18 +171,9 @@
 		5F1C40561BC9907000034E2E /* System */ = {
 			isa = PBXGroup;
 			children = (
-				5FFD37BE1BD4397700DEC2AF /* Futures */,
-				5F1C40611BC9A79D00034E2E /* Utilities */,
+				5F77C3E61BDA715D0059B69F /* Utilities.swift */,
 			);
 			path = System;
-			sourceTree = "<group>";
-		};
-		5F1C40611BC9A79D00034E2E /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				5F8FF21C1BD2978D00752515 /* Utilities.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5F219DBD1BD02E4800CBB10F /* Navigation Controller */ = {
@@ -234,10 +186,32 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		5F77C3B81BDA66100059B69F /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				5F77C3B91BDA66620059B69F /* Mac */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		5F77C3B91BDA66620059B69F /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */,
+				5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */,
+				5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */,
+				5F77C3CA1BDA69BA0059B69F /* Result.framework */,
+				5F77C3CB1BDA69BA0059B69F /* Runes.framework */,
+			);
+			name = Mac;
+			path = Build/Mac;
+			sourceTree = "<group>";
+		};
 		5F88DFBA1B0330E6003495C3 = {
 			isa = PBXGroup;
 			children = (
 				5F219DB41BD021D700CBB10F /* Cartfile */,
+				5F77C3B81BDA66100059B69F /* Carthage */,
 				5F1C3FA21BC9896E00034E2E /* Magikombat */,
 				5F88DFC41B0330E6003495C3 /* Products */,
 			);
@@ -251,15 +225,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5FFD37BE1BD4397700DEC2AF /* Futures */ = {
-			isa = PBXGroup;
-			children = (
-				5FFD37BF1BD4397700DEC2AF /* BrightFutures.framework */,
-				5FFD37C01BD4397700DEC2AF /* Result.framework */,
-			);
-			path = Futures;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,13 +236,11 @@
 				5F88DFC01B0330E6003495C3 /* Frameworks */,
 				5F88DFC11B0330E6003495C3 /* Resources */,
 				5F219DC21BD0306200CBB10F /* ShellScript */,
-				5F219DC71BD0315400CBB10F /* Embed Frameworks */,
+				5F77C3E51BDA69D20059B69F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5F1C40511BC98C4E00034E2E /* PBXTargetDependency */,
-				5F1C40531BC98C4E00034E2E /* PBXTargetDependency */,
 			);
 			name = Magikombat;
 			productName = Magikombat;
@@ -311,35 +274,12 @@
 			mainGroup = 5F88DFBA1B0330E6003495C3;
 			productRefGroup = 5F88DFC41B0330E6003495C3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5F1C3FAF1BC9896E00034E2E /* Products */;
-					ProjectRef = 5F1C3FAE1BC9896E00034E2E /* OpenEmu-SDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5F88DFC21B0330E6003495C3 /* Magikombat */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5F1C404B1BC9896E00034E2E /* OpenEmuBase.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OpenEmuBase.framework;
-			remoteRef = 5F1C404A1BC9896E00034E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5F1C404D1BC9896E00034E2E /* OpenEmuSystem.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OpenEmuSystem.framework;
-			remoteRef = 5F1C404C1BC9896E00034E2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5F88DFC11B0330E6003495C3 /* Resources */ = {
@@ -381,8 +321,8 @@
 				5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */,
 				5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */,
 				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
+				5F77C3E71BDA715D0059B69F /* Utilities.swift in Sources */,
 				5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */,
-				5F8FF21D1BD2978D00752515 /* Utilities.swift in Sources */,
 				5F17AB191BD6C128006A9125 /* PlanetLevel.swift in Sources */,
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
 				5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */,
@@ -396,19 +336,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5F1C40511BC98C4E00034E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OpenEmuBase;
-			targetProxy = 5F1C40501BC98C4E00034E2E /* PBXContainerItemProxy */;
-		};
-		5F1C40531BC98C4E00034E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OpenEmuSystem;
-			targetProxy = 5F1C40521BC98C4E00034E2E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F1C3FA41BC9896E00034E2E /* MainMenu.xib */ = {
@@ -510,7 +437,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Magikombat/**",
-					"$(PROJECT_DIR)/Magikombat/System/Futures",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,7 +462,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Magikombat/**",
-					"$(PROJECT_DIR)/Magikombat/System/Futures",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

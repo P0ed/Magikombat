@@ -1,2 +1,4 @@
+github "P0ed/OpenEmu-SDK" "8f6f3ea61a833e3b5447cc1f6555b3d30b19ca43"
 github "antitypical/Result" "0.6.0-beta.4"
+github "thoughtbot/Runes" "v3.0.0"
 github "Thomvis/BrightFutures" "v3.0.0"

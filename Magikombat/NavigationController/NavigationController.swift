@@ -53,7 +53,7 @@ extension NavigationController {
 			}
 		}.onFailure {
 			_ in
-			popScene()
+			self.popScene()
 		}
 	}
 }
