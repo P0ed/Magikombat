@@ -13,7 +13,7 @@ class MenuScene: BaseScene {
 			guard let index = selectedIndex else { return }
 
 			labels.enumerate().forEach {
-				$0.element.fontColor = $0.index == index ? NSColor.redColor() : NSColor.blueColor()
+				$0.element.fontColor = $0.index == index ? SKColor.redColor() : SKColor.blueColor()
 			}
 		}
 	}
@@ -114,7 +114,4 @@ class MenuScene: BaseScene {
 	func escape() {
 		promise!.failure(.Nothing)
 	}
-
-	/// FIXME: Убрать куда-нибудь (фиксит звук непохендленной клавиатуры)
-	override func keyDown(theEvent: NSEvent) {}
 }

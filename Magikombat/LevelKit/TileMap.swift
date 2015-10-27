@@ -8,9 +8,14 @@ enum TileType {
 	case Dirt
 }
 
-struct Tile {
+class Tile {
 
 	var type: TileType
+	var object: PlanetObject?
+
+	init(type: TileType) {
+		self.type = type
+	}
 }
 
 struct TileMap {

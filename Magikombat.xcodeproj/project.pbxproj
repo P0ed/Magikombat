@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F01B34B1BDBC252005A7F8B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01B34A1BDBC252005A7F8B /* Player.swift */; };
+		5F01B34D1BDBC5E8005A7F8B /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01B34C1BDBC5E8005A7F8B /* Units.swift */; };
 		5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB111BD6C022006A9125 /* PlanetScene.swift */; };
 		5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB131BD6C02B006A9125 /* BattleScene.swift */; };
 		5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB151BD6C052006A9125 /* SpaceScene.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F01B34A1BDBC252005A7F8B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5F01B34C1BDBC5E8005A7F8B /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		5F17AB111BD6C022006A9125 /* PlanetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetScene.swift; sourceTree = "<group>"; };
 		5F17AB131BD6C02B006A9125 /* BattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
 		5F17AB151BD6C052006A9125 /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
@@ -109,6 +113,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F01B3461BDBBB2C005A7F8B /* Space Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5F17AB151BD6C052006A9125 /* SpaceScene.swift */,
+			);
+			name = "Space Scene";
+			sourceTree = "<group>";
+		};
+		5F01B3471BDBBB37005A7F8B /* Planet Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5F17AB111BD6C022006A9125 /* PlanetScene.swift */,
+			);
+			name = "Planet Scene";
+			sourceTree = "<group>";
+		};
+		5F01B3481BDBBB49005A7F8B /* Battle Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5F17AB131BD6C02B006A9125 /* BattleScene.swift */,
+			);
+			name = "Battle Scene";
+			sourceTree = "<group>";
+		};
+		5F01B3491BDBC1F8005A7F8B /* Game Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F17AB171BD6C128006A9125 /* PlanetLevel.swift */,
+				5F01B34A1BDBC252005A7F8B /* Player.swift */,
+				5F01B34C1BDBC5E8005A7F8B /* Units.swift */,
+			);
+			name = "Game Models";
+			path = GameModels;
+			sourceTree = "<group>";
+		};
 		5F1C3FA21BC9896E00034E2E /* Magikombat */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +156,7 @@
 				5F219DBD1BD02E4800CBB10F /* Navigation Controller */,
 				5F1C404F1BC9898C00034E2E /* Menu */,
 				5F1C40081BC9896E00034E2E /* LevelKit */,
+				5F01B3491BDBC1F8005A7F8B /* Game Models */,
 				5F1C400F1BC9896E00034E2E /* Game Scenes */,
 				5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */,
 				5F1C3FA41BC9896E00034E2E /* MainMenu.xib */,
@@ -143,7 +183,6 @@
 		5F1C40081BC9896E00034E2E /* LevelKit */ = {
 			isa = PBXGroup;
 			children = (
-				5F17AB171BD6C128006A9125 /* PlanetLevel.swift */,
 				5F17AB181BD6C128006A9125 /* TileMap.swift */,
 				5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */,
 			);
@@ -153,9 +192,9 @@
 		5F1C400F1BC9896E00034E2E /* Game Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5F17AB151BD6C052006A9125 /* SpaceScene.swift */,
-				5F17AB111BD6C022006A9125 /* PlanetScene.swift */,
-				5F17AB131BD6C02B006A9125 /* BattleScene.swift */,
+				5F01B3461BDBBB2C005A7F8B /* Space Scene */,
+				5F01B3471BDBBB37005A7F8B /* Planet Scene */,
+				5F01B3481BDBBB49005A7F8B /* Battle Scene */,
 			);
 			name = "Game Scenes";
 			path = GameScenes;
@@ -333,9 +372,11 @@
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
 				5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */,
 				5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */,
+				5F01B34D1BDBC5E8005A7F8B /* Units.swift in Sources */,
 				5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */,
 				5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */,
 				5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */,
+				5F01B34B1BDBC252005A7F8B /* Player.swift in Sources */,
 				5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */,
 				5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */,
 			);

@@ -6,10 +6,10 @@ class TileMapGenerator {
 	static func generateTileMap() -> TileMap {
 
 		var tileMap = TileMap()
-		tileMap.size = TileMap.Size(width: 64, height:64)
+		tileMap.size = TileMap.Size(width: 65, height:65)
 
 		let dsa = DiamondSquareAlgorithm()
-		let heightMap = dsa.makeHeightMap(6, variation: 18)
+		let heightMap = dsa.makeHeightMap(7, variation: 22)
 
 		tileMap.tiles = (0 ..< tileMap.size.width).map { x in
 			return (0 ..< tileMap.size.height).map { y in
