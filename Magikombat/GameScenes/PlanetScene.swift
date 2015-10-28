@@ -12,7 +12,7 @@ class PlanetScene: BaseScene {
 	override func becomeFirstResponder() -> Bool {
 		appDelegate().eventsController.deviceConfiguration = DeviceConfiguration(
 			buttonsMapTable: [
-				.Circle: PressAction { appDelegate().navigationController?.popScene() }
+				.Circle: PressAction { self.promise!.failure(.Nothing) }
 			],
 			dPadMapTable: [:],
 			keyboardMapTable: [

@@ -70,6 +70,9 @@ extension NavigationController {
 	func performSegue(segue: Segue) {
 		switch segue {
 		case .NewGame:
+			let scene = PlatformerScene(size: view.bounds.size)
+			pushScene(scene)
+		case .OldGame:
 			let scene = PlanetScene(size: view.bounds.size)
 			pushScene(scene)
 		}
