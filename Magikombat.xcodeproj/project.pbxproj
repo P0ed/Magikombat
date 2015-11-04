@@ -41,6 +41,9 @@
 		5F7BD9791BDFEE9B003BF82E /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9781BDFEE9B003BF82E /* Engine.swift */; };
 		5F7BD97B1BDFF22D003BF82E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD97A1BDFF22D003BF82E /* Renderer.swift */; };
 		5F7BD97D1BDFF44A003BF82E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD97C1BDFF44A003BF82E /* GameState.swift */; };
+		5F7BD9801BE6B758003BF82E /* RemoteEngineConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD97F1BE6B758003BF82E /* RemoteEngineConnection.swift */; };
+		5F7BD9841BE6BFD3003BF82E /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9821BE6B87C003BF82E /* Input.swift */; };
+		5F7BD9861BEA6C56003BF82E /* EngineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9851BEA6C56003BF82E /* EngineController.swift */; };
 		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; };
 		5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9F21C1BD7EE2400183A56 /* Router.swift */; };
 		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; };
@@ -99,6 +102,9 @@
 		5F7BD9781BDFEE9B003BF82E /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		5F7BD97A1BDFF22D003BF82E /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		5F7BD97C1BDFF44A003BF82E /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		5F7BD97F1BE6B758003BF82E /* RemoteEngineConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEngineConnection.swift; sourceTree = "<group>"; };
+		5F7BD9821BE6B87C003BF82E /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		5F7BD9851BEA6C56003BF82E /* EngineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineController.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FF21E1BD2F00300752515 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		5FA9F21C1BD7EE2400183A56 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -151,7 +157,6 @@
 				5F17AB171BD6C128006A9125 /* PlanetLevel.swift */,
 				5F01B34A1BDBC252005A7F8B /* Player.swift */,
 				5F01B34C1BDBC5E8005A7F8B /* Units.swift */,
-				5F7BD97C1BDFF44A003BF82E /* GameState.swift */,
 			);
 			name = "Game Models";
 			path = GameModels;
@@ -167,6 +172,8 @@
 				5F1C40081BC9896E00034E2E /* LevelKit */,
 				5F01B3491BDBC1F8005A7F8B /* Game Models */,
 				5F1C400F1BC9896E00034E2E /* Game Scenes */,
+				5F7BD9811BE6B7E8003BF82E /* Engine */,
+				5F7BD97E1BE6B724003BF82E /* Networking */,
 				5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */,
 				5F1C3FA41BC9896E00034E2E /* MainMenu.xib */,
 				5F1C40061BC9896E00034E2E /* Images.xcassets */,
@@ -266,10 +273,28 @@
 			isa = PBXGroup;
 			children = (
 				5F7BD9761BDFE21A003BF82E /* PlatformerScene.swift */,
-				5F7BD9781BDFEE9B003BF82E /* Engine.swift */,
 				5F7BD97A1BDFF22D003BF82E /* Renderer.swift */,
 			);
 			name = "Platform Scene";
+			sourceTree = "<group>";
+		};
+		5F7BD97E1BE6B724003BF82E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5F7BD97F1BE6B758003BF82E /* RemoteEngineConnection.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5F7BD9811BE6B7E8003BF82E /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				5F7BD9851BEA6C56003BF82E /* EngineController.swift */,
+				5F7BD9781BDFEE9B003BF82E /* Engine.swift */,
+				5F7BD97C1BDFF44A003BF82E /* GameState.swift */,
+				5F7BD9821BE6B87C003BF82E /* Input.swift */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 		5F88DFBA1B0330E6003495C3 = {
@@ -387,6 +412,7 @@
 				5F7BD97B1BDFF22D003BF82E /* Renderer.swift in Sources */,
 				5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */,
 				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
+				5F7BD9801BE6B758003BF82E /* RemoteEngineConnection.swift in Sources */,
 				5F7BD9791BDFEE9B003BF82E /* Engine.swift in Sources */,
 				5F77C3E71BDA715D0059B69F /* Utilities.swift in Sources */,
 				5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */,
@@ -395,6 +421,7 @@
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
 				5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */,
 				5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */,
+				5F7BD9861BEA6C56003BF82E /* EngineController.swift in Sources */,
 				5F01B34D1BDBC5E8005A7F8B /* Units.swift in Sources */,
 				5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */,
 				5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */,
@@ -402,6 +429,7 @@
 				5F01B34B1BDBC252005A7F8B /* Player.swift in Sources */,
 				5F7BD97D1BDFF44A003BF82E /* GameState.swift in Sources */,
 				5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */,
+				5F7BD9841BE6BFD3003BF82E /* Input.swift in Sources */,
 				5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

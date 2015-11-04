@@ -3,9 +3,10 @@ import SpriteKit
 
 class PlatformerScene: BaseScene {
 
-	var engine: Engine!
+	var engineController: EngineController!
 	var renderer: Renderer!
 	var world: SKNode!
+	var inputController: InputController!
 
 	override func didMoveToView(view: SKView) {
 		super.didMoveToView(view);
@@ -13,7 +14,8 @@ class PlatformerScene: BaseScene {
 		world = SKNode()
 		self.addChild(world)
 
-		engine = Engine()
+		inputController = InputController(appDelegate().eventsController)
+		engineController = EngineController()
 		renderer = Renderer(world: world)
 
 		let camera = SKCameraNode()
@@ -36,8 +38,7 @@ class PlatformerScene: BaseScene {
 		return true
 	}
 
-	override func update(currentTime: NSTimeInterval) {
-		let state = engine.stateFromTime(currentTime)
-		renderer.renderState(state)
+	override func update(currentTime: Double) {
+		renderer.renderState(engineController.stateFromTime(currentTime, input:inputController.currentInput()))
 	}
 }
