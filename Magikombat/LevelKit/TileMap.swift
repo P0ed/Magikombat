@@ -11,7 +11,6 @@ enum TileType {
 class Tile {
 
 	var type: TileType
-	var object: PlanetObject?
 
 	init(type: TileType) {
 		self.type = type

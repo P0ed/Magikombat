@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F01B34B1BDBC252005A7F8B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01B34A1BDBC252005A7F8B /* Player.swift */; };
-		5F01B34D1BDBC5E8005A7F8B /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01B34C1BDBC5E8005A7F8B /* Units.swift */; };
-		5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB111BD6C022006A9125 /* PlanetScene.swift */; };
-		5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB131BD6C02B006A9125 /* BattleScene.swift */; };
-		5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB151BD6C052006A9125 /* SpaceScene.swift */; };
-		5F17AB191BD6C128006A9125 /* PlanetLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB171BD6C128006A9125 /* PlanetLevel.swift */; };
 		5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AB181BD6C128006A9125 /* TileMap.swift */; };
 		5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */; };
 		5F1C40131BC9896E00034E2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1C3FA41BC9896E00034E2E /* MainMenu.xib */; };
@@ -26,6 +21,9 @@
 		5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1C405F1BC99B4100034E2E /* MenuModel.swift */; };
 		5F219DBF1BD02E7300CBB10F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F219DBE1BD02E7300CBB10F /* NavigationController.swift */; };
 		5F4FB5181BDAE6BE00F19CD8 /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FB5171BDAE6BE00F19CD8 /* BaseScene.swift */; };
+		5F6C71F81BEF647C00BAFFB2 /* HeroSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C71F71BEF647C00BAFFB2 /* HeroSelectScene.swift */; };
+		5F6C71FB1BEF707700BAFFB2 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C71FA1BEF707700BAFFB2 /* Hero.swift */; };
+		5F6C71FE1BEF78FD00BAFFB2 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C71FD1BEF78FD00BAFFB2 /* Heroes.swift */; };
 		5F77C3DB1BDA69D20059B69F /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; };
 		5F77C3DC1BDA69D20059B69F /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */; };
@@ -69,11 +67,6 @@
 
 /* Begin PBXFileReference section */
 		5F01B34A1BDBC252005A7F8B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		5F01B34C1BDBC5E8005A7F8B /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
-		5F17AB111BD6C022006A9125 /* PlanetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetScene.swift; sourceTree = "<group>"; };
-		5F17AB131BD6C02B006A9125 /* BattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
-		5F17AB151BD6C052006A9125 /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
-		5F17AB171BD6C128006A9125 /* PlanetLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetLevel.swift; sourceTree = "<group>"; };
 		5F17AB181BD6C128006A9125 /* TileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
 		5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F1C3FA51BC9896E00034E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -92,6 +85,9 @@
 		5F219DBE1BD02E7300CBB10F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		5F4FB5161BDAA38F00F19CD8 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
 		5F4FB5171BDAE6BE00F19CD8 /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
+		5F6C71F71BEF647C00BAFFB2 /* HeroSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSelectScene.swift; sourceTree = "<group>"; };
+		5F6C71FA1BEF707700BAFFB2 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		5F6C71FD1BEF78FD00BAFFB2 /* Heroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
 		5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BrightFutures.framework; sourceTree = "<group>"; };
 		5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
 		5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
@@ -127,36 +123,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F01B3461BDBBB2C005A7F8B /* Space Scene */ = {
-			isa = PBXGroup;
-			children = (
-				5F17AB151BD6C052006A9125 /* SpaceScene.swift */,
-			);
-			name = "Space Scene";
-			sourceTree = "<group>";
-		};
-		5F01B3471BDBBB37005A7F8B /* Planet Scene */ = {
-			isa = PBXGroup;
-			children = (
-				5F17AB111BD6C022006A9125 /* PlanetScene.swift */,
-			);
-			name = "Planet Scene";
-			sourceTree = "<group>";
-		};
-		5F01B3481BDBBB49005A7F8B /* Battle Scene */ = {
-			isa = PBXGroup;
-			children = (
-				5F17AB131BD6C02B006A9125 /* BattleScene.swift */,
-			);
-			name = "Battle Scene";
-			sourceTree = "<group>";
-		};
 		5F01B3491BDBC1F8005A7F8B /* Game Models */ = {
 			isa = PBXGroup;
 			children = (
-				5F17AB171BD6C128006A9125 /* PlanetLevel.swift */,
 				5F01B34A1BDBC252005A7F8B /* Player.swift */,
-				5F01B34C1BDBC5E8005A7F8B /* Units.swift */,
+				5F6C71FA1BEF707700BAFFB2 /* Hero.swift */,
+				5F6C71FC1BEF78EF00BAFFB2 /* Heroes */,
 			);
 			name = "Game Models";
 			path = GameModels;
@@ -208,10 +180,8 @@
 		5F1C400F1BC9896E00034E2E /* Game Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5F7BD9751BDFE1FF003BF82E /* Platform Scene */,
-				5F01B3461BDBBB2C005A7F8B /* Space Scene */,
-				5F01B3471BDBBB37005A7F8B /* Planet Scene */,
-				5F01B3481BDBBB49005A7F8B /* Battle Scene */,
+				5F6C71F91BEF648100BAFFB2 /* Hero Select */,
+				5F7BD9751BDFE1FF003BF82E /* Game Level */,
 			);
 			name = "Game Scenes";
 			path = GameScenes;
@@ -246,6 +216,22 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		5F6C71F91BEF648100BAFFB2 /* Hero Select */ = {
+			isa = PBXGroup;
+			children = (
+				5F6C71F71BEF647C00BAFFB2 /* HeroSelectScene.swift */,
+			);
+			name = "Hero Select";
+			sourceTree = "<group>";
+		};
+		5F6C71FC1BEF78EF00BAFFB2 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				5F6C71FD1BEF78FD00BAFFB2 /* Heroes.swift */,
+			);
+			name = Heroes;
+			sourceTree = "<group>";
+		};
 		5F77C3B81BDA66100059B69F /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,13 +255,13 @@
 			path = Build/Mac;
 			sourceTree = "<group>";
 		};
-		5F7BD9751BDFE1FF003BF82E /* Platform Scene */ = {
+		5F7BD9751BDFE1FF003BF82E /* Game Level */ = {
 			isa = PBXGroup;
 			children = (
 				5F7BD9761BDFE21A003BF82E /* PlatformerScene.swift */,
 				5F7BD97A1BDFF22D003BF82E /* Renderer.swift */,
 			);
-			name = "Platform Scene";
+			name = "Game Level";
 			sourceTree = "<group>";
 		};
 		5F7BD97E1BE6B724003BF82E /* Networking */ = {
@@ -408,7 +394,6 @@
 				5F4FB5181BDAE6BE00F19CD8 /* BaseScene.swift in Sources */,
 				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
 				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
-				5F17AB161BD6C052006A9125 /* SpaceScene.swift in Sources */,
 				5F7BD97B1BDFF22D003BF82E /* Renderer.swift in Sources */,
 				5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */,
 				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
@@ -416,19 +401,18 @@
 				5F7BD9791BDFEE9B003BF82E /* Engine.swift in Sources */,
 				5F77C3E71BDA715D0059B69F /* Utilities.swift in Sources */,
 				5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */,
-				5F17AB191BD6C128006A9125 /* PlanetLevel.swift in Sources */,
+				5F6C71F81BEF647C00BAFFB2 /* HeroSelectScene.swift in Sources */,
 				5F7BD9771BDFE21A003BF82E /* PlatformerScene.swift in Sources */,
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
+				5F6C71FB1BEF707700BAFFB2 /* Hero.swift in Sources */,
 				5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */,
 				5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */,
 				5F7BD9861BEA6C56003BF82E /* EngineController.swift in Sources */,
-				5F01B34D1BDBC5E8005A7F8B /* Units.swift in Sources */,
 				5F1C40151BC9896E00034E2E /* DeviceAction.swift in Sources */,
 				5F1C40161BC9896E00034E2E /* DeviceConfiguration.swift in Sources */,
-				5F17AB141BD6C02B006A9125 /* BattleScene.swift in Sources */,
 				5F01B34B1BDBC252005A7F8B /* Player.swift in Sources */,
 				5F7BD97D1BDFF44A003BF82E /* GameState.swift in Sources */,
-				5F17AB121BD6C022006A9125 /* PlanetScene.swift in Sources */,
+				5F6C71FE1BEF78FD00BAFFB2 /* Heroes.swift in Sources */,
 				5F7BD9841BE6BFD3003BF82E /* Input.swift in Sources */,
 				5F1C40181BC9896E00034E2E /* EventsController.swift in Sources */,
 			);

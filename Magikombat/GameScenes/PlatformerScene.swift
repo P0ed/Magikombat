@@ -23,8 +23,8 @@ class PlatformerScene: BaseScene {
 		self.camera = camera
 	}
 
-	override func becomeFirstResponder() -> Bool {
-		appDelegate().eventsController.deviceConfiguration = DeviceConfiguration(
+	override func controlsMap() -> DeviceConfiguration {
+		return DeviceConfiguration(
 			buttonsMapTable: [
 				.Circle: PressAction { self.promise!.failure(.Nothing) }
 			],
@@ -35,7 +35,6 @@ class PlatformerScene: BaseScene {
 				}
 			]
 		)
-		return true
 	}
 
 	override func update(currentTime: Double) {

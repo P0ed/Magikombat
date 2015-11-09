@@ -7,9 +7,6 @@ extension MenuModel {
 			MenuItem(title: "New game") {
 				Future(value: .Route(.NewGame))
 			},
-			MenuItem(title: "Old game") {
-				Future(value: .Route(.OldGame))
-			},
 			MenuItem(title: "Options") {
 				Future(error: .Nothing)
 			},
