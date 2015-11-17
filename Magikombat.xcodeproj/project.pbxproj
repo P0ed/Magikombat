@@ -43,6 +43,8 @@
 		5F7BD9841BE6BFD3003BF82E /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9821BE6B87C003BF82E /* Input.swift */; };
 		5F7BD9861BEA6C56003BF82E /* EngineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9851BEA6C56003BF82E /* EngineController.swift */; };
 		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; };
+		5F96A3BA1BFBCCB9004AE577 /* Box2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F96A3B91BFBCCB9004AE577 /* Box2D.framework */; };
+		5F96A3BF1BFBCFA7004AE577 /* B2DWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F96A3BE1BFBCFA7004AE577 /* B2DWorld.mm */; };
 		5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9F21C1BD7EE2400183A56 /* Router.swift */; };
 		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,9 @@
 		5F7BD9851BEA6C56003BF82E /* EngineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineController.swift; sourceTree = "<group>"; };
 		5F88DFC31B0330E6003495C3 /* Magikombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magikombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FF21E1BD2F00300752515 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		5F96A3B91BFBCCB9004AE577 /* Box2D.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box2D.framework; sourceTree = "<group>"; };
+		5F96A3BD1BFBCFA7004AE577 /* B2DWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorld.h; sourceTree = "<group>"; };
+		5F96A3BE1BFBCFA7004AE577 /* B2DWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorld.mm; sourceTree = "<group>"; };
 		5FA9F21C1BD7EE2400183A56 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +119,7 @@
 			files = (
 				5F77C3DB1BDA69D20059B69F /* BrightFutures.framework in Frameworks */,
 				5F77C3DF1BDA69D20059B69F /* OpenEmuSystem.framework in Frameworks */,
+				5F96A3BA1BFBCCB9004AE577 /* Box2D.framework in Frameworks */,
 				5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */,
 				5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */,
 				5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */,
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5F1C40561BC9907000034E2E /* System */,
+				5F601CBC1BFBBA71008DA324 /* Physics */,
 				5F1C3FA61BC9896E00034E2E /* GamepadKit */,
 				5F219DBD1BD02E4800CBB10F /* Navigation Controller */,
 				5F1C404F1BC9898C00034E2E /* Menu */,
@@ -216,6 +223,15 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		5F601CBC1BFBBA71008DA324 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				5F96A3BD1BFBCFA7004AE577 /* B2DWorld.h */,
+				5F96A3BE1BFBCFA7004AE577 /* B2DWorld.mm */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
 		5F6C71F91BEF648100BAFFB2 /* Hero Select */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +261,7 @@
 		5F77C3B91BDA66620059B69F /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				5F96A3B91BFBCCB9004AE577 /* Box2D.framework */,
 				5F77C3C71BDA69BA0059B69F /* BrightFutures.framework */,
 				5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */,
 				5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */,
@@ -395,6 +412,7 @@
 				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
 				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
 				5F7BD97B1BDFF22D003BF82E /* Renderer.swift in Sources */,
+				5F96A3BF1BFBCFA7004AE577 /* B2DWorld.mm in Sources */,
 				5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */,
 				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
 				5F7BD9801BE6B758003BF82E /* RemoteEngineConnection.swift in Sources */,

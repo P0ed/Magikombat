@@ -3,7 +3,7 @@ BrightFutures
 
 How do you leverage the power of Swift to write great asynchronous code? BrightFutures is our answer.
 
-BrightFutures implements proven [functional concepts](http://en.wikipedia.org/wiki/Futures_and_promises) to provide a powerful alternative to completion blocks and typesafe error handling in asynchronous code.
+BrightFutures implements proven [functional concepts](http://en.wikipedia.org/wiki/Futures_and_promises) in Swift to provide a powerful alternative to completion blocks and support typesafe error handling in asynchronous code.
 
 The goal of BrightFutures is to be *the* idiomatic Swift implementation of futures and promises.
 Our Big Hairy Audacious Goal (BHAG) is to be copy-pasted into the Swift standard library.
@@ -33,7 +33,7 @@ github "Thomvis/BrightFutures"
 Run `carthage update` and follow the steps as described in Carthage's [README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
 
 ## Documentation
-- API documentation is available at the wonderful [cocoadocs.org](http://cocoadocs.org/docsets/BrightFutures) (100% documentation coverage)
+- API documentation is available at the wonderful [cocoadocs.org](http://cocoadocs.org/docsets/BrightFutures)
 - This README covers almost all features of BrightFutures
 - The [tests](BrightFuturesTests) contain (trivial) usage examples for every feature (97% test coverage)
 - The primary author, Thomas Visser, gave [a talk](https://www.youtube.com/watch?v=lgJT2KMMEmU) at the April 2015 CocoaHeadsNL meetup
