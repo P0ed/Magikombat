@@ -1,4 +1,5 @@
 import Foundation
+import GameplayKit
 
 typealias Position = (x: Int, y: Int)
 
@@ -27,8 +28,15 @@ final class TileMapGenerator {
 
 	var map: TileMap
 	var steps: [TileMap] = []
+	
+	let random: GKARC4RandomSource
 
-	init(width: Int, height: Int) {
+	init(seed: Int, width: Int, height: Int) {
+
+		var seedValue = seed.value
+		let seedData = NSData(bytes: &seedValue, length: sizeof(seedValue.dynamicType))
+		random = GKARC4RandomSource(seed: seedData)
+
 		map = TileMap(width: width, height: height)
 	}
 
@@ -38,7 +46,7 @@ final class TileMapGenerator {
 		makeFloor()
 		makePlatforms()
 
-		return steps
+		return [map]
 	}
 
 	private func makeWalls() {
@@ -47,12 +55,44 @@ final class TileMapGenerator {
 			map.setTile(Tile(type: .Wall), at: (0, index))
 			map.setTile(Tile(type: .Wall), at: (map.size.width - 1, index))
 		}
+	}
 
-		steps.append(map)
+	private func makePlatform(at at: Position, size: Int, type: TileType) -> PlatformNode {
+
+		let node = PlatformNode()
+		node.pos = at
+		node.size = size
+
+		for index in 0..<size {
+			map.setTile(Tile(type: type), at: (at.x + index, at.y))
+		}
+
+		return node
 	}
 
 	private func makeFloor() {
 
+		var emptyTiles = map.size.width - 2
+		var floorPlatforms = [PlatformNode]()
+
+		while emptyTiles > platformDimensions.minWidth + platformDimensions.maxWidth {
+
+			let width = platformDimensions.minWidth + random.nextIntWithUpperBound(platformDimensions.maxWidth - platformDimensions.minWidth)
+
+			let platform = makePlatform(at: (map.size.width - emptyTiles - 1, 0), size: width, type: .Wall)
+			platform.left = floorPlatforms.last
+			floorPlatforms.last?.right = platform
+
+			floorPlatforms.append(platform)
+
+			emptyTiles -= width
+		}
+
+		let lastPlatform = makePlatform(at: (map.size.width - emptyTiles - 1, 0), size: emptyTiles, type: .Wall)
+		lastPlatform.left = floorPlatforms.last
+		floorPlatforms.last?.right = lastPlatform
+
+		platforms.append(floorPlatforms)
 	}
 
 	private func makePlatforms() {

@@ -3,6 +3,12 @@ import SpriteKit
 
 let tileSize = 32
 
+func delay(delay: Double, on queue: dispatch_queue_t = dispatch_get_main_queue(), closure: ()->()) {
+	let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+	dispatch_after(time, queue, closure)
+}
+
+
 final class LevelGeneratorScene: BaseScene {
 
 	var world: SKNode!
@@ -39,7 +45,7 @@ final class LevelGeneratorScene: BaseScene {
 	}
 
 	func generateMap() {
-		let generator = TileMapGenerator(width: 256, height: 64)
+		let generator = TileMapGenerator(seed: 0, width: 256, height: 64)
 		stepsQueue = generator.generateTileMap()
 		scheduleQueue()
 	}
@@ -49,8 +55,7 @@ final class LevelGeneratorScene: BaseScene {
 			renderTileMap(steps.removeFirst())
 
 			if steps.count > 0 {
-				let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
-				dispatch_after(dispatchTime, dispatch_get_main_queue(), scheduleQueue)
+				delay(3, closure: scheduleQueue)
 			}
 		}
 	}
