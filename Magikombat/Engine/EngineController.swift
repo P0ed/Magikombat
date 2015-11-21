@@ -44,7 +44,7 @@ class EngineController {
 		accumulator += frameTime
 
 		while accumulator >= SimulationTime.dt {
-			let state = engine.simulatePhysics(GameState(), input: input)
+			engine.simulatePhysics(GameState(), input: input)
 
 			accumulator -= SimulationTime.dt
 		}

@@ -45,6 +45,11 @@
 		5F8FF21F1BD2F00300752515 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF21E1BD2F00300752515 /* MenuScene.swift */; };
 		5F96A3BA1BFBCCB9004AE577 /* Box2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F96A3B91BFBCCB9004AE577 /* Box2D.framework */; };
 		5F96A3BF1BFBCFA7004AE577 /* B2DWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F96A3BE1BFBCFA7004AE577 /* B2DWorld.mm */; };
+		5F96A3FD1BFD11C6004AE577 /* Box2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F96A3B91BFBCCB9004AE577 /* Box2D.framework */; };
+		5F96A3FE1BFD11C6004AE577 /* Box2D.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F96A3B91BFBCCB9004AE577 /* Box2D.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F96A4011BFD1717004AE577 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F96A4001BFD1717004AE577 /* Actor.swift */; };
+		5F96A4041C007EEA004AE577 /* LevelGeneratorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F96A4031C007EEA004AE577 /* LevelGeneratorScene.swift */; };
+		5F96A4061C00835D004AE577 /* DiamondSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F96A4051C00835D004AE577 /* DiamondSquare.swift */; };
 		5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9F21C1BD7EE2400183A56 /* Router.swift */; };
 		5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +63,7 @@
 			files = (
 				5F77C3DC1BDA69D20059B69F /* BrightFutures.framework in Embed Frameworks */,
 				5F77C3E01BDA69D20059B69F /* OpenEmuSystem.framework in Embed Frameworks */,
+				5F96A3FE1BFD11C6004AE577 /* Box2D.framework in Embed Frameworks */,
 				5F77C3DE1BDA69D20059B69F /* OpenEmuBase.framework in Embed Frameworks */,
 				5F77C3E41BDA69D20059B69F /* Runes.framework in Embed Frameworks */,
 				5F77C3E21BDA69D20059B69F /* Result.framework in Embed Frameworks */,
@@ -77,7 +83,6 @@
 		5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
 		5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
 		5F1C3FAB1BC9896E00034E2E /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenEmu-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F1C40041BC9896E00034E2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F1C40061BC9896E00034E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F1C40071BC9896E00034E2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +113,10 @@
 		5F96A3B91BFBCCB9004AE577 /* Box2D.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box2D.framework; sourceTree = "<group>"; };
 		5F96A3BD1BFBCFA7004AE577 /* B2DWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B2DWorld.h; sourceTree = "<group>"; };
 		5F96A3BE1BFBCFA7004AE577 /* B2DWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = B2DWorld.mm; sourceTree = "<group>"; };
+		5F96A3FF1BFD1242004AE577 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		5F96A4001BFD1717004AE577 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		5F96A4031C007EEA004AE577 /* LevelGeneratorScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelGeneratorScene.swift; sourceTree = "<group>"; };
+		5F96A4051C00835D004AE577 /* DiamondSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondSquare.swift; sourceTree = "<group>"; };
 		5FA9F21C1BD7EE2400183A56 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5FEB7C8C1BD3EFF1005061D9 /* MainMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +132,7 @@
 				5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */,
 				5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */,
 				5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */,
+				5F96A3FD1BFD11C6004AE577 /* Box2D.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +164,7 @@
 				5F7BD9811BE6B7E8003BF82E /* Engine */,
 				5F7BD97E1BE6B724003BF82E /* Networking */,
 				5F1C3FA31BC9896E00034E2E /* AppDelegate.swift */,
+				5F96A3FF1BFD1242004AE577 /* Bridging-Header.h */,
 				5F1C3FA41BC9896E00034E2E /* MainMenu.xib */,
 				5F1C40061BC9896E00034E2E /* Images.xcassets */,
 				5F1C40071BC9896E00034E2E /* Info.plist */,
@@ -169,7 +180,6 @@
 				5F1C3FA91BC9896E00034E2E /* DeviceConfiguration.swift */,
 				5F1C3FAA1BC9896E00034E2E /* DSExtensions.swift */,
 				5F1C3FAB1BC9896E00034E2E /* EventsController.swift */,
-				5F1C40031BC9896E00034E2E /* OpenEmu-SDK-Bridging-Header.h */,
 				5F1C40041BC9896E00034E2E /* README.md */,
 			);
 			path = GamepadKit;
@@ -180,6 +190,7 @@
 			children = (
 				5F17AB181BD6C128006A9125 /* TileMap.swift */,
 				5F1C400A1BC9896E00034E2E /* TileMapGenerator.swift */,
+				5F96A4051C00835D004AE577 /* DiamondSquare.swift */,
 			);
 			path = LevelKit;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 		5F1C400F1BC9896E00034E2E /* Game Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5F96A4021C007E83004AE577 /* Level Generator */,
 				5F6C71F91BEF648100BAFFB2 /* Hero Select */,
 				5F7BD9751BDFE1FF003BF82E /* Game Level */,
 			);
@@ -296,6 +308,7 @@
 				5F7BD9781BDFEE9B003BF82E /* Engine.swift */,
 				5F7BD97C1BDFF44A003BF82E /* GameState.swift */,
 				5F7BD9821BE6B87C003BF82E /* Input.swift */,
+				5F96A4001BFD1717004AE577 /* Actor.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -315,6 +328,14 @@
 				5F88DFC31B0330E6003495C3 /* Magikombat.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5F96A4021C007E83004AE577 /* Level Generator */ = {
+			isa = PBXGroup;
+			children = (
+				5F96A4031C007EEA004AE577 /* LevelGeneratorScene.swift */,
+			);
+			name = "Level Generator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +433,9 @@
 				5F1C40441BC9896E00034E2E /* TileMapGenerator.swift in Sources */,
 				5F1C40171BC9896E00034E2E /* DSExtensions.swift in Sources */,
 				5F7BD97B1BDFF22D003BF82E /* Renderer.swift in Sources */,
+				5F96A4041C007EEA004AE577 /* LevelGeneratorScene.swift in Sources */,
 				5F96A3BF1BFBCFA7004AE577 /* B2DWorld.mm in Sources */,
+				5F96A4061C00835D004AE577 /* DiamondSquare.swift in Sources */,
 				5F17AB1A1BD6C128006A9125 /* TileMap.swift in Sources */,
 				5F1C40601BC99B4100034E2E /* MenuModel.swift in Sources */,
 				5F7BD9801BE6B758003BF82E /* RemoteEngineConnection.swift in Sources */,
@@ -422,6 +445,7 @@
 				5F6C71F81BEF647C00BAFFB2 /* HeroSelectScene.swift in Sources */,
 				5F7BD9771BDFE21A003BF82E /* PlatformerScene.swift in Sources */,
 				5F1C40121BC9896E00034E2E /* AppDelegate.swift in Sources */,
+				5F96A4011BFD1717004AE577 /* Actor.swift in Sources */,
 				5F6C71FB1BEF707700BAFFB2 /* Hero.swift in Sources */,
 				5FA9F21D1BD7EE2400183A56 /* Router.swift in Sources */,
 				5FEB7C8D1BD3EFF1005061D9 /* MainMenuModel.swift in Sources */,
@@ -551,7 +575,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 			};
 			name = Debug;
@@ -576,7 +600,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.p0ed.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/GamepadKit/OpenEmu-SDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Magikombat/Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 			};
 			name = Release;

@@ -7,6 +7,9 @@ extension MenuModel {
 			MenuItem(title: "New game") {
 				Future(value: .Route(.NewGame))
 			},
+			MenuItem(title: "Level generator") {
+				Future(value: .Route(.LevelGenerator))
+			},
 			MenuItem(title: "Options") {
 				Future(error: .Nothing)
 			},

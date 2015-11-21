@@ -42,8 +42,8 @@ class NavigationController {
 			case let .Menu(model):
 				self.pushScene(MenuScene(size: self.view.bounds.size, model: model))
 			}
-			}.onFailure { _ in
-				self.popScene()
+		}.onFailure { _ in
+			self.popScene()
 		}
 	}
 }
@@ -71,6 +71,9 @@ extension NavigationController {
 		switch segue {
 		case .NewGame:
 			let scene = PlatformerScene(size: view.bounds.size)
+			pushScene(scene)
+		case .LevelGenerator:
+			let scene = LevelGeneratorScene(size: view.bounds.size)
 			pushScene(scene)
 		}
 	}

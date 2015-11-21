@@ -1,5 +1,5 @@
 import Foundation
 
-struct GameState {
-	
+class Actor {
+
 }

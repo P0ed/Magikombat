@@ -1,20 +1,12 @@
 import Foundation
 
 enum TileType {
-	case Color(Int)
-	case Water
-	case Sand
-	case Arid
-	case Dirt
+	case Wall
+	case Platform
 }
 
-class Tile {
-
-	var type: TileType
-
-	init(type: TileType) {
-		self.type = type
-	}
+struct Tile {
+	let type: TileType
 }
 
 struct TileMap {
@@ -24,13 +16,32 @@ struct TileMap {
 		var height: Int
 	}
 
-	var size: TileMap.Size
-	var tiles: [[Tile]]
+	let size: TileMap.Size
+	var tiles: [Tile?]
 
 	init() {
 		size = TileMap.Size(width: 0, height: 0)
 		tiles = []
 	}
 
-	func calculateWalkPath() {}
+	init(width: Int, height: Int) {
+		size = TileMap.Size(width: width, height: height)
+		tiles = Array(count: size.width * size.height, repeatedValue: nil)
+	}
+
+	mutating func setTile(tile: Tile?, at: (x: Int, y: Int)) {
+		tiles[at.y * size.width + at.x] = tile
+	}
+
+	func tileAt(x: Int, y: Int) -> Tile? {
+		return tiles[y * size.width + x]
+	}
+
+	func forEach(@noescape f: (tile: Tile, position: Position) -> ()) {
+		tiles.enumerate().forEach { item in
+			if let tile = item.element {
+				f(tile: tile, position: (x: item.index % size.width, y: item.index / size.width))
+			}
+		}
+	}
 }
