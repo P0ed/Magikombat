@@ -29,8 +29,8 @@ struct TileMap {
 		tiles = Array(count: size.width * size.height, repeatedValue: nil)
 	}
 
-	mutating func setTile(tile: Tile?, at: Position) {
-		tiles[at.y * size.width + at.x] = tile
+	mutating func setTile(tile: Tile?, at position: Position) {
+		tiles[position.y * size.width + position.x] = tile
 	}
 
 	func tileAt(position: Position) -> Tile? {

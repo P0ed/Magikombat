@@ -5,7 +5,7 @@ typealias Position = (x: Int, y: Int)
 
 final class PlatformNode {
 
-	var pos: Position = (x: 0, y: 0)
+	var position: Position = (x: 0, y: 0)
 	var size: Int = 0
 
 	var left: PlatformNode? = nil
@@ -57,14 +57,14 @@ final class TileMapGenerator {
 		}
 	}
 
-	private func makePlatform(at at: Position, size: Int, type: TileType) -> PlatformNode {
+	private func makePlatform(at position: Position, size: Int, type: TileType) -> PlatformNode {
 
 		let node = PlatformNode()
-		node.pos = at
+		node.position = position
 		node.size = size
 
 		for index in 0..<size {
-			map.setTile(Tile(type: type), at: (at.x + index, at.y))
+			map.setTile(Tile(type: type), at: (position.x + index, position.y))
 		}
 
 		return node
