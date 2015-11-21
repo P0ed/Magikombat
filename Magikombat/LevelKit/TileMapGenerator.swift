@@ -96,6 +96,16 @@ final class TileMapGenerator {
 	}
 
 	private func makePlatforms() {
-		
+
+		let topPlatforms = platforms.last!
+
+		let platformIndex = random.nextIntWithUpperBound(topPlatforms.count)
+		let parentPlatform = topPlatforms[platformIndex]
+
+		let height = platformDimensions.requiredHeight / 2 + random.nextIntWithUpperBound(platformDimensions.requiredHeight / 2)
+
+		let platform = makePlatform(at: (parentPlatform.position.x, parentPlatform.position.y + height), size: parentPlatform.size, type: .Platform)
+		platform.bottom = parentPlatform
+		parentPlatform.top = platform
 	}
 }

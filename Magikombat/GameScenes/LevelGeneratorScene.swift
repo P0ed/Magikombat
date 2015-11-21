@@ -96,7 +96,7 @@ final class LevelGeneratorScene: BaseScene {
 			let node = SKSpriteNode(color: tileColor(tile.type), size: CGSize(width: tileSize, height: tileSize))
 			node.position = CGPoint(x: position.x * tileSize, y: position.y * tileSize)
 			node.anchorPoint = CGPointZero
-			self.world.addChild(node)
+			world.addChild(node)
 		}
 	}
 }
