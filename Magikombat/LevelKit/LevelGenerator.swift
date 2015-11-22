@@ -1,19 +1,6 @@
 import Foundation
 import GameplayKit
 
-typealias Position = (x: Int, y: Int)
-
-final class PlatformNode {
-
-	var position: Position = (x: 0, y: 0)
-	var size: Int = 0
-
-	var left: PlatformNode? = nil
-	var right: PlatformNode? = nil
-	var top: PlatformNode? = nil
-	var bottom: PlatformNode? = nil
-}
-
 private struct PlatformDimensions {
 	var minWidth = 8
 	var maxWidth = 32
@@ -52,22 +39,18 @@ final class TileMapGenerator {
 	private func makeWalls() {
 
 		for index in 0..<map.size.height {
-			map.setTile(Tile(type: .Wall), at: (0, index))
-			map.setTile(Tile(type: .Wall), at: (map.size.width - 1, index))
+			map.setTile(.Wall, at: Position(x: 0, y: index))
+			map.setTile(.Wall, at: Position(x: map.size.width - 1, y: index))
 		}
 	}
 
-	private func makePlatform(at position: Position, size: Int, type: TileType) -> PlatformNode {
+	private func makePlatform(at position: Position, length: Int, type: Tile) -> PlatformNode {
 
-		let node = PlatformNode()
-		node.position = position
-		node.size = size
-
-		for index in 0..<size {
-			map.setTile(Tile(type: type), at: (position.x + index, position.y))
+		for index in 0..<length {
+			map.setTile(type, at: Position(x: position.x + index, y: position.y))
 		}
 
-		return node
+		return PlatformNode(platform: Platform(position: position, size: Size(width: length, height: 1), type: type))
 	}
 
 	private func makeFloor() {
@@ -79,7 +62,7 @@ final class TileMapGenerator {
 
 			let width = platformDimensions.minWidth + random.nextIntWithUpperBound(platformDimensions.maxWidth - platformDimensions.minWidth)
 
-			let platform = makePlatform(at: (map.size.width - emptyTiles - 1, 0), size: width, type: .Wall)
+			let platform = makePlatform(at: Position(x: map.size.width - emptyTiles - 1, y: 0), length: width, type: .Wall)
 			platform.left = floorPlatforms.last
 			floorPlatforms.last?.right = platform
 
@@ -88,7 +71,7 @@ final class TileMapGenerator {
 			emptyTiles -= width
 		}
 
-		let lastPlatform = makePlatform(at: (map.size.width - emptyTiles - 1, 0), size: emptyTiles, type: .Wall)
+		let lastPlatform = makePlatform(at: Position(x: map.size.width - emptyTiles - 1, y: 0), length: emptyTiles, type: .Wall)
 		lastPlatform.left = floorPlatforms.last
 		floorPlatforms.last?.right = lastPlatform
 
@@ -100,12 +83,13 @@ final class TileMapGenerator {
 		let topPlatforms = platforms.last!
 
 		let platformIndex = random.nextIntWithUpperBound(topPlatforms.count)
-		let parentPlatform = topPlatforms[platformIndex]
+		let parent = topPlatforms[platformIndex]
 
 		let height = platformDimensions.requiredHeight / 2 + random.nextIntWithUpperBound(platformDimensions.requiredHeight / 2)
 
-		let platform = makePlatform(at: (parentPlatform.position.x, parentPlatform.position.y + height), size: parentPlatform.size, type: .Platform)
-		platform.bottom = parentPlatform
-		parentPlatform.top = platform
+		let position = Position(x: parent.platform.position.x, y: parent.platform.position.y + height)
+		let platform = makePlatform(at: position, length: parent.platform.size.width, type: .Platform)
+		platform.bottom = parent
+		parent.top = platform
 	}
 }

@@ -86,14 +86,14 @@ final class LevelGeneratorScene: BaseScene {
 	func renderTileMap(tileMap: TileMap) {
 		tileMap.forEach { tile, position in
 
-			func tileColor(tile: TileType) -> SKColor {
+			func tileColor(tile: Tile) -> SKColor {
 				switch tile {
 				case .Wall: return SKColor(red: 0.8, green: 0.7, blue: 0.3, alpha: 1.0)
 				case .Platform: return SKColor(red: 0.4, green: 0.5, blue: 0.5, alpha: 1.0)
 				}
 			}
 
-			let node = SKSpriteNode(color: tileColor(tile.type), size: CGSize(width: tileSize, height: tileSize))
+			let node = SKSpriteNode(color: tileColor(tile), size: CGSize(width: tileSize, height: tileSize))
 			node.position = CGPoint(x: position.x * tileSize, y: position.y * tileSize)
 			node.anchorPoint = CGPointZero
 			world.addChild(node)

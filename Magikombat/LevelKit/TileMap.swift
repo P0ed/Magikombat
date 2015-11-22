@@ -1,31 +1,22 @@
 import Foundation
 
-enum TileType {
+enum Tile {
 	case Wall
 	case Platform
 }
 
-struct Tile {
-	let type: TileType
-}
-
 struct TileMap {
 
-	struct Size {
-		var width: Int
-		var height: Int
-	}
-
-	let size: TileMap.Size
+	let size: Size
 	var tiles: [Tile?]
 
 	init() {
-		size = TileMap.Size(width: 0, height: 0)
+		size = Size(width: 0, height: 0)
 		tiles = []
 	}
 
 	init(width: Int, height: Int) {
-		size = TileMap.Size(width: width, height: height)
+		size = Size(width: width, height: height)
 		tiles = Array(count: size.width * size.height, repeatedValue: nil)
 	}
 
@@ -40,7 +31,7 @@ struct TileMap {
 	func forEach(@noescape f: (tile: Tile, position: Position) -> ()) {
 		tiles.enumerate().forEach { item in
 			if let tile = item.element {
-				f(tile: tile, position: (x: item.index % size.width, y: item.index / size.width))
+				f(tile: tile, position: Position(x: item.index % size.width, y: item.index / size.width))
 			}
 		}
 	}
