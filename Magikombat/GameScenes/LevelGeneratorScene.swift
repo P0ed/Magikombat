@@ -1,8 +1,6 @@
 import Foundation
 import SpriteKit
 
-let tileSize = 32
-
 func delay(delay: Double, on queue: dispatch_queue_t = dispatch_get_main_queue(), closure: ()->()) {
 	let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
 	dispatch_after(time, queue, closure)
@@ -46,14 +44,14 @@ final class LevelGeneratorScene: BaseScene {
 
 	func generateMap() {
 
-		let generator = TileMapGenerator(seed: 0, width: 256, height: 64)
+		let generator = TileMapGenerator(seed: Int(arc4random_uniform(256) + 1), width: 256, height: 64)
 		let level = generator.generateLevel()
 		var platforms = level.allNodes
 		self.level = level
 
 		func schedule() {
 			renderPlatform(platforms.removeFirst().platform)
-			if platforms.count > 0 { delay(0.1, closure: schedule) }
+			if platforms.count > 0 { delay(0.05, closure: schedule) }
 		}
 		schedule()
 	}

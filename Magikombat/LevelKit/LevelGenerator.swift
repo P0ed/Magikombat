@@ -7,9 +7,9 @@ private struct PlatformDimensions {
 	var requiredHeight = 16
 }
 
-final class TileMapGenerator {
+private let platformDimensions = PlatformDimensions()
 
-	private let platformDimensions = PlatformDimensions()
+final class TileMapGenerator {
 
 	var map: TileMap
 	var steps: [TileMap] = []
@@ -89,6 +89,5 @@ final class TileMapGenerator {
 		let position = Position(x: parent.platform.position.x, y: parent.platform.position.y + height)
 		let platform = makePlatform(at: position, length: parent.platform.size.width, type: .Platform)
 		platform.bottom = parent
-		parent.top = platform
 	}
 }

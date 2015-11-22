@@ -1,7 +1,8 @@
 import Foundation
 
 struct Input {
-
+	var dPad: DSHatDirection = .Null
+	var jump: Bool = false
 }
 
 class InputController {
@@ -13,6 +14,8 @@ class InputController {
 	}
 
 	func currentInput() -> Input {
-		return Input()
+		var input = Input()
+		input.dPad = eventsController.hatDirection
+		return input
 	}
 }

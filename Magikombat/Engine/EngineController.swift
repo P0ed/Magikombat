@@ -15,17 +15,20 @@ class EngineController {
 
 	let engine: Engine
 	let remote: RemoteEngineConnection
-
-	init() {
-		engine = Engine()
-		remote = RemoteEngineConnection()
-	}
+	var state: GameState
+	let level: Level
 
 	var simulationTime: SimulationTime?
 	var stateBuffer: [(tick: Int, state: GameState)] = []
 
 	var accumulator = 0.0
 
+	init(level: Level) {
+		self.level = level
+		engine = Engine()
+		remote = RemoteEngineConnection()
+		state = GameState()
+	}
 
 	func startGame(time: Double) {
 		simulationTime = SimulationTime(startingTime: time, currentTick: 0)
@@ -44,17 +47,17 @@ class EngineController {
 		accumulator += frameTime
 
 		while accumulator >= SimulationTime.dt {
-			engine.simulatePhysics(GameState(), input: input)
+			state = engine.simulatePhysics(state, input: input)
 
 			accumulator -= SimulationTime.dt
 		}
 
 		let alpha = accumulator / SimulationTime.dt
 
-		return interpolate(GameState(), alpha: alpha)
+		return interpolate(s1: state, s2: state, alpha: alpha)
 	}
+}
 
-	func interpolate(state: GameState, alpha: Double) -> GameState {
-		return GameState()
-	}
+func interpolate(s1 s1: GameState, s2: GameState, alpha: Double) -> GameState {
+	return s1
 }

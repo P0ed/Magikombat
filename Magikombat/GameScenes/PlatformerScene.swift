@@ -14,13 +14,16 @@ class PlatformerScene: BaseScene {
 		world = SKNode()
 		self.addChild(world)
 
-		inputController = InputController(appDelegate().eventsController)
-		engineController = EngineController()
-		renderer = Renderer(world: world)
+		let generator = TileMapGenerator(seed: Int(arc4random_uniform(256) + 1), width: 256, height: 64)
+		let level = generator.generateLevel()
 
 		let camera = SKCameraNode()
 		addChild(camera)
 		self.camera = camera
+
+		inputController = InputController(appDelegate().eventsController)
+		engineController = EngineController(level: level)
+		renderer = Renderer(level: level, world: world, camera: camera)
 	}
 
 	override func controlsMap() -> DeviceConfiguration {
@@ -38,6 +41,8 @@ class PlatformerScene: BaseScene {
 	}
 
 	override func update(currentTime: Double) {
-		renderer.renderState(engineController.stateFromTime(currentTime, input:inputController.currentInput()))
+		let input = inputController.currentInput()
+		let state = engineController.stateFromTime(currentTime, input:input)
+		renderer.renderState(state)
 	}
 }
