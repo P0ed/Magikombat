@@ -12,7 +12,7 @@ func delay(delay: Double, on queue: dispatch_queue_t = dispatch_get_main_queue()
 final class LevelGeneratorScene: BaseScene {
 
 	var world: SKNode!
-	var stepsQueue: [TileMap]?
+	var level: Level?
 
 	override func controlsMap() -> DeviceConfiguration {
 		return DeviceConfiguration(
@@ -45,19 +45,33 @@ final class LevelGeneratorScene: BaseScene {
 	}
 
 	func generateMap() {
+
 		let generator = TileMapGenerator(seed: 0, width: 256, height: 64)
-		stepsQueue = generator.generateTileMap()
-		scheduleQueue()
+		let level = generator.generateLevel()
+		var platforms = level.allNodes
+		self.level = level
+
+		func schedule() {
+			renderPlatform(platforms.removeFirst().platform)
+			if platforms.count > 0 { delay(0.1, closure: schedule) }
+		}
+		schedule()
 	}
 
-	func scheduleQueue() {
-		if var steps = stepsQueue {
-			renderTileMap(steps.removeFirst())
+	func renderPlatform(platform: Platform) {
 
-			if steps.count > 0 {
-				delay(3, closure: scheduleQueue)
+		func tileColor(tile: Tile) -> SKColor {
+			switch tile {
+			case .Wall: return SKColor(red: 0.8, green: 0.7, blue: 0.3, alpha: 1.0)
+			case .Platform: return SKColor(red: 0.4, green: 0.5, blue: 0.5, alpha: 1.0)
 			}
 		}
+
+		let size = CGSize(width: platform.size.width * tileSize, height: platform.size.height * tileSize)
+		let node = SKSpriteNode(color: tileColor(platform.type), size: size)
+		node.position = CGPoint(x: platform.position.x * tileSize, y: platform.position.y * tileSize)
+		node.anchorPoint = CGPointZero
+		world.addChild(node)
 	}
 
 	override func update(currentTime: NSTimeInterval) {

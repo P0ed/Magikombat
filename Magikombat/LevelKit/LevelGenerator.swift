@@ -11,8 +11,6 @@ final class TileMapGenerator {
 
 	private let platformDimensions = PlatformDimensions()
 
-	private var platforms: [[PlatformNode]] = []
-
 	var map: TileMap
 	var steps: [TileMap] = []
 	
@@ -27,60 +25,61 @@ final class TileMapGenerator {
 		map = TileMap(width: width, height: height)
 	}
 
-	func generateTileMap() -> [TileMap] {
+	func generateLevel() -> Level {
 
-		makeWalls()
-		makeFloor()
-		makePlatforms()
+		let walls = makeWalls()
+		let floor = makeFloor(walls)
+		makePlatforms(floor)
 
-		return [map]
-	}
-
-	private func makeWalls() {
-
-		for index in 0..<map.size.height {
-			map.setTile(.Wall, at: Position(x: 0, y: index))
-			map.setTile(.Wall, at: Position(x: map.size.width - 1, y: index))
-		}
+		return Level(rootNode: walls.first!, size: map.size)
 	}
 
 	private func makePlatform(at position: Position, length: Int, type: Tile) -> PlatformNode {
-
-		for index in 0..<length {
-			map.setTile(type, at: Position(x: position.x + index, y: position.y))
-		}
-
-		return PlatformNode(platform: Platform(position: position, size: Size(width: length, height: 1), type: type))
+		return makePlatform(at: position, size: Size(width: length, height: 1), type: type)
 	}
 
-	private func makeFloor() {
+	private func makePlatform(at position: Position, size: Size, type: Tile) -> PlatformNode{
+		let platform = Platform(position: position, size: size, type: type)
+		platform.forEach {
+			map.setTile(type, at: $0)
+		}
+		return PlatformNode(platform)
+	}
 
-		var emptyTiles = map.size.width - 2
+	private func makeWalls() -> [PlatformNode] {
+		let left = makePlatform(at: Position(x: 0, y: 0), size: Size(width: 8, height: map.size.height), type: .Wall)
+		let right = makePlatform(at: Position(x: map.size.width - 8, y: 0), size: Size(width: 8, height: map.size.height), type: .Wall)
+		return [left, right]
+	}
+
+	private func makeFloor(walls: [PlatformNode]) -> [PlatformNode] {
+
+		let leftWallWidth = walls.first!.platform.size.width
+		let rightWallWidth = walls.last!.platform.size.width
+		var emptyTiles = map.size.width - leftWallWidth - rightWallWidth
 		var floorPlatforms = [PlatformNode]()
 
 		while emptyTiles > platformDimensions.minWidth + platformDimensions.maxWidth {
 
 			let width = platformDimensions.minWidth + random.nextIntWithUpperBound(platformDimensions.maxWidth - platformDimensions.minWidth)
 
-			let platform = makePlatform(at: Position(x: map.size.width - emptyTiles - 1, y: 0), length: width, type: .Wall)
-			platform.left = floorPlatforms.last
-			floorPlatforms.last?.right = platform
-
+			let platform = makePlatform(at: Position(x: map.size.width - emptyTiles - leftWallWidth, y: 0), length: width, type: .Platform)
+			platform.left = floorPlatforms.last ?? walls.first
 			floorPlatforms.append(platform)
 
 			emptyTiles -= width
 		}
 
-		let lastPlatform = makePlatform(at: Position(x: map.size.width - emptyTiles - 1, y: 0), length: emptyTiles, type: .Wall)
+		let lastPlatform = makePlatform(at: Position(x: map.size.width - emptyTiles - leftWallWidth, y: 0), length: emptyTiles, type: .Platform)
 		lastPlatform.left = floorPlatforms.last
-		floorPlatforms.last?.right = lastPlatform
+		lastPlatform.right = walls.last
 
-		platforms.append(floorPlatforms)
+		return floorPlatforms
 	}
 
-	private func makePlatforms() {
+	private func makePlatforms(floor: [PlatformNode]) {
 
-		let topPlatforms = platforms.last!
+		var topPlatforms = floor
 
 		let platformIndex = random.nextIntWithUpperBound(topPlatforms.count)
 		let parent = topPlatforms[platformIndex]
