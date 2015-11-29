@@ -5,6 +5,10 @@ struct Vector {
 	var dy: Float
 
 	static let zeroVector = Vector(dx: 0, dy: 0)
+
+	func asB2DVector() -> B2DVector {
+		return B2DVector(dx: dx, dy: dy)
+	}
 }
 
 struct ActorState {

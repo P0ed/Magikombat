@@ -4,6 +4,6 @@
 #import <OpenEmuBase/OpenEmuBase.h>
 #import <OpenEmuSystem/OpenEmuSystem.h>
 
-#import "B2DWorld.h"
+#import "B2DPhysics.h"
 
 #endif

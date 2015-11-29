@@ -25,7 +25,7 @@ class EngineController {
 
 	init(level: Level) {
 		self.level = level
-		engine = Engine()
+		engine = Engine(level: level)
 		remote = RemoteEngineConnection()
 		state = GameState()
 	}
