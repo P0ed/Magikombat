@@ -12,6 +12,10 @@ final class World {
 		B2DReleaseWorld(worldRef)
 	}
 
+	func step() {
+		B2DStep(worldRef)
+	}
+
 	func createStaticBody(position: Vector, size: Vector) -> Body {
 		let bodyRef = B2DCreateStaticBody(worldRef, position.asB2DVector(), size.asB2DVector())
 		let body = Body(bodyRef: bodyRef, type: .Static)

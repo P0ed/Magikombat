@@ -11,6 +11,12 @@ struct Vector {
 	}
 }
 
+extension B2DVector {
+	func asVector() -> Vector {
+		return Vector(dx: dx, dy: dy)
+	}
+}
+
 struct ActorState {
 	var position: Vector
 	var velocity: Vector

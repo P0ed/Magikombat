@@ -47,7 +47,7 @@ class EngineController {
 		accumulator += frameTime
 
 		while accumulator >= SimulationTime.dt {
-			state = engine.simulatePhysics(state, input: input)
+			state = engine.simulatePhysics(input)
 
 			accumulator -= SimulationTime.dt
 		}

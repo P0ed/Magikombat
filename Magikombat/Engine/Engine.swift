@@ -3,6 +3,9 @@ import Foundation
 class Engine {
 
 	let world = World()
+	var state = GameState()
+
+	var hero = Actor()
 
 	init(level: Level) {
 		setup(level)
@@ -14,38 +17,33 @@ class Engine {
 			let platform = node.platform
 			world.createStaticBody(platform.position.asVector(), size: platform.size.asVector())
 		}
+
+		hero.body = world.createDynamicBody(Vector(dx: 300, dy: 100), size: Size(width: 1, height: 2).asVector())
 	}
 
 	func handleInput(input: Input) {
 		let dPad = input.dPad.rawValue
 		if dPad & DSHatDirection.Left.rawValue != 0 {
-
+//			state.hero.position.dx -= 1
 		}
 		if dPad & DSHatDirection.Right.rawValue != 0 {
-
+//			state.hero.position.dx += 1
 		}
 		if dPad & DSHatDirection.Up.rawValue != 0 {
-
+//			state.hero.position.dy += 1
 		}
 		if dPad & DSHatDirection.Down.rawValue != 0 {
-
+//			state.hero.position.dy -= 1
 		}
 	}
 
-	func simulatePhysics(var state: GameState, input: Input) -> GameState {
+	func simulatePhysics(input: Input) -> GameState {
 		handleInput(input)
 
-		switch(input.dPad) {
-		case .Left:
-			state.hero.position.dx -= 1
-		case .Right:
-			state.hero.position.dx += 1
-		case .Up:
-			state.hero.position.dy += 1
-		case .Down:
-			state.hero.position.dy -= 1
-		default: break
-		}
+		world.step()
+
+		state.hero.position = hero.body!.position
+
 		return state
 	}
 }
