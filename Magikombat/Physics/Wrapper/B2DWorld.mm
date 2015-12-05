@@ -4,6 +4,8 @@
 
 static inline b2World *asWorld(WorldRef ref) { return (b2World *)ref; }
 static inline b2Body *asBody(BodyRef ref) { return (b2Body *)ref; }
+static inline b2Vec2 asVec2(B2DVector vector) { return b2Vec2(vector.dx, vector.dy); }
+static inline B2DVector asVector(b2Vec2 vector) { return {.dx = vector.x, .dy = vector.y}; }
 
 WorldRef B2DCreateWorld() {
 	b2World *world = new b2World(b2Vec2(0, -10));
@@ -46,6 +48,14 @@ BodyRef B2DCreateDynamicBody(WorldRef world, B2DVector position, B2DVector size)
 }
 
 B2DVector B2DBodyPosition(BodyRef body) {
-	auto b2_position = asBody(body)->GetPosition();
-	return {.dx = b2_position.x, .dy = b2_position.y};
+	return asVector(asBody(body)->GetPosition());
+}
+
+B2DVector B2DBodyVelocity(BodyRef body) {
+	return asVector(asBody(body)->GetLinearVelocity());
+}
+
+void B2DBodyApplyImpulse(BodyRef body, B2DVector impulse) {
+	auto b2_body = asBody(body);
+	b2_body->ApplyLinearImpulse(asVec2(impulse), b2_body->GetWorldCenter(), true);
 }

@@ -22,19 +22,7 @@ class Engine {
 	}
 
 	func handleInput(input: Input) {
-		let dPad = input.dPad.rawValue
-		if dPad & DSHatDirection.Left.rawValue != 0 {
-//			state.hero.position.dx -= 1
-		}
-		if dPad & DSHatDirection.Right.rawValue != 0 {
-//			state.hero.position.dx += 1
-		}
-		if dPad & DSHatDirection.Up.rawValue != 0 {
-//			state.hero.position.dy += 1
-		}
-		if dPad & DSHatDirection.Down.rawValue != 0 {
-//			state.hero.position.dy -= 1
-		}
+		hero.handleInput(input)
 	}
 
 	func simulatePhysics(input: Input) -> GameState {

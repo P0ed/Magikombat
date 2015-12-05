@@ -16,6 +16,16 @@ class Body {
 		}
 	}
 
+	var velocity: Vector {
+		get {
+			return B2DBodyVelocity(bodyRef).asVector()
+		}
+	}
+
+	func applyImpulse(impulse: Vector) {
+		B2DBodyApplyImpulse(bodyRef, impulse.asB2DVector())
+	}
+
 	init(bodyRef: BodyRef, type: Type) {
 		self.bodyRef = bodyRef
 		self.type = type
