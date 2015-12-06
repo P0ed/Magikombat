@@ -5,7 +5,7 @@ let tileSize = 32
 
 func createHero() -> SKNode {
 	let color = SKColor(red: 0.9, green:0.2, blue: 0.3, alpha: 1.0)
-	let size = CGSize(width: tileSize, height: tileSize)
+	let size = CGSize(width: tileSize, height: 2 * tileSize)
 	return SKSpriteNode(color: color, size: size)
 }
 

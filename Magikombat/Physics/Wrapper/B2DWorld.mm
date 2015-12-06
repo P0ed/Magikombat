@@ -23,7 +23,7 @@ void B2DStep(WorldRef world) {
 BodyRef B2DCreateStaticBody(WorldRef world, B2DVector position, B2DVector size) {
 	b2BodyDef bodyDef = b2BodyDef();
 	bodyDef.type = b2_staticBody;
-	bodyDef.position.Set(position.dx, position.dy);
+	bodyDef.position.Set(position.dx + size.dx / 2, position.dy + size.dy / 2);
 
 	b2Body *body = asWorld(world)->CreateBody(&bodyDef);
 	b2PolygonShape shape;
