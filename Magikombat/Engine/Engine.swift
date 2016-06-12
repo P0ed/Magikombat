@@ -18,7 +18,7 @@ class Engine {
 			world.createStaticBody(platform.position.asVector(), size: platform.size.asVector())
 		}
 
-		hero.body = world.createDynamicBody(Vector(dx: 300, dy: 100), size: Size(width: 1, height: 2).asVector())
+		hero.body = world.createDynamicBody(Position(x: 10, y: 10).asVector(), size: Size(width: 1, height: 2).asVector())
 	}
 
 	func handleInput(input: Input) {

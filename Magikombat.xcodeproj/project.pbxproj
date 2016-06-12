@@ -34,8 +34,6 @@
 		5F77C3E01BDA69D20059B69F /* OpenEmuSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CA1BDA69BA0059B69F /* Result.framework */; };
 		5F77C3E21BDA69D20059B69F /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CA1BDA69BA0059B69F /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CB1BDA69BA0059B69F /* Runes.framework */; };
-		5F77C3E41BDA69D20059B69F /* Runes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77C3CB1BDA69BA0059B69F /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F77C3E71BDA715D0059B69F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F77C3E61BDA715D0059B69F /* Utilities.swift */; };
 		5F7BD9771BDFE21A003BF82E /* PlatformerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9761BDFE21A003BF82E /* PlatformerScene.swift */; };
 		5F7BD9791BDFEE9B003BF82E /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BD9781BDFEE9B003BF82E /* Engine.swift */; };
@@ -71,7 +69,6 @@
 				5F77C3E01BDA69D20059B69F /* OpenEmuSystem.framework in Embed Frameworks */,
 				5F96A3FE1BFD11C6004AE577 /* Box2D.framework in Embed Frameworks */,
 				5F77C3DE1BDA69D20059B69F /* OpenEmuBase.framework in Embed Frameworks */,
-				5F77C3E41BDA69D20059B69F /* Runes.framework in Embed Frameworks */,
 				5F77C3E21BDA69D20059B69F /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -109,7 +106,6 @@
 		5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
 		5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
 		5F77C3CA1BDA69BA0059B69F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		5F77C3CB1BDA69BA0059B69F /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
 		5F77C3E61BDA715D0059B69F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5F7BD9761BDFE21A003BF82E /* PlatformerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformerScene.swift; sourceTree = "<group>"; };
 		5F7BD9781BDFEE9B003BF82E /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 				5F77C3DF1BDA69D20059B69F /* OpenEmuSystem.framework in Frameworks */,
 				5F96A3BA1BFBCCB9004AE577 /* Box2D.framework in Frameworks */,
 				5F77C3DD1BDA69D20059B69F /* OpenEmuBase.framework in Frameworks */,
-				5F77C3E31BDA69D20059B69F /* Runes.framework in Frameworks */,
 				5F77C3E11BDA69D20059B69F /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +306,6 @@
 				5F77C3C81BDA69BA0059B69F /* OpenEmuBase.framework */,
 				5F77C3C91BDA69BA0059B69F /* OpenEmuSystem.framework */,
 				5F77C3CA1BDA69BA0059B69F /* Result.framework */,
-				5F77C3CB1BDA69BA0059B69F /* Runes.framework */,
 			);
 			name = Mac;
 			path = Build/Mac;

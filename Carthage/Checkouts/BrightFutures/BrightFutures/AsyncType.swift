@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol AsyncType {
-    typealias Value
+    associatedtype Value
     
     var result: Value? { get }
     
@@ -29,10 +29,9 @@ public extension AsyncType {
     }
     
     /// Blocks the current thread until the future is completed and then returns the result
-    public func forced() -> Value? {
-        return forced(TimeInterval.Forever)
+    public func forced() -> Value {
+        return forced(TimeInterval.Forever)!
     }
-    
     
     /// See `forced(timeout: TimeInterval) -> Value?`
     public func forced(timeout: NSTimeInterval) -> Value? {
@@ -76,8 +75,10 @@ public extension AsyncType {
     /// queue.
     public func delay(queue: Queue, interval: NSTimeInterval) -> Self {
         return Self { complete in
-            queue.after(.In(interval)) {
-                self.onComplete(ImmediateExecutionContext, callback: complete)
+            onComplete(ImmediateExecutionContext) { result in
+                queue.after(.In(interval)) {
+                    complete(result)
+                }
             }
         }
     }

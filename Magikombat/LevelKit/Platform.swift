@@ -6,8 +6,8 @@ struct Platform {
 	var type: Tile = .Wall
 
 	func forEach(@noescape f: Position -> ()) {
-		for var x = position.x; x < position.x + size.width; ++x {
-			for var y = position.y; y < position.y + size.height; ++y {
+		for x in position.x ..< (position.x + size.width) {
+			for y  in position.y ..< (position.y + size.height) {
 				f(Position(x: x, y: y))
 			}
 		}

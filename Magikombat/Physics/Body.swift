@@ -11,15 +11,15 @@ class Body {
 	let type: Type
 
 	var position: Vector {
-		get {
-			return B2DBodyPosition(bodyRef).asVector()
-		}
+		return B2DBodyPosition(bodyRef).asVector()
 	}
 
 	var velocity: Vector {
-		get {
-			return B2DBodyVelocity(bodyRef).asVector()
-		}
+		return B2DBodyVelocity(bodyRef).asVector()
+	}
+
+	var mass: Float {
+		return B2DBodyMass(bodyRef)
 	}
 
 	func applyImpulse(impulse: Vector) {

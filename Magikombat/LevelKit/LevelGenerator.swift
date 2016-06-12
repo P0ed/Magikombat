@@ -18,7 +18,7 @@ final class TileMapGenerator {
 
 	init(seed: Int, width: Int, height: Int) {
 
-		var seedValue = seed.value
+		var seedValue = seed
 		let seedData = NSData(bytes: &seedValue, length: sizeof(seedValue.dynamicType))
 		random = GKARC4RandomSource(seed: seedData)
 

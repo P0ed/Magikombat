@@ -1,5 +1,5 @@
 github "P0ed/Box2D" "b1cc02b578e8f62f1f4081b93a33eb77e26a19a8"
+github "P0ed/Fx" "f08fd20cda5bf8111e1a76b9013f7d395d2090e7"
 github "P0ed/OpenEmu-SDK" "8f6f3ea61a833e3b5447cc1f6555b3d30b19ca43"
-github "antitypical/Result" "0.6.0-beta.6"
-github "thoughtbot/Runes" "v3.1.0"
-github "Thomvis/BrightFutures" "v3.1.2"
+github "antitypical/Result" "2.1.0"
+github "Thomvis/BrightFutures" "v4.1.0"

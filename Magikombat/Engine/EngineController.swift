@@ -11,7 +11,7 @@ struct SimulationTime {
 	}
 }
 
-class EngineController {
+final class EngineController {
 
 	let engine: Engine
 	let remote: RemoteEngineConnection
@@ -58,6 +58,6 @@ class EngineController {
 	}
 }
 
-func interpolate(s1 s1: GameState, s2: GameState, alpha: Double) -> GameState {
-	return s1
+private func interpolate(s1 s1: GameState, s2: GameState, alpha: Double) -> GameState {
+	return s2
 }

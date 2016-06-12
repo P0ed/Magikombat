@@ -5,7 +5,7 @@ struct Position {
 	var y: Int
 
 	func asVector() -> Vector {
-		return Vector(dx: Float(x * tileSize), dy: Float(y * tileSize))
+		return Vector(dx: Float(x), dy: Float(y))
 	}
 }
 
@@ -14,6 +14,6 @@ struct Size {
 	var height: Int
 
 	func asVector() -> Vector {
-		return Vector(dx: Float(width * tileSize), dy: Float(height * tileSize))
+		return Vector(dx: Float(width), dy: Float(height))
 	}
 }

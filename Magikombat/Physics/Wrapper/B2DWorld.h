@@ -14,5 +14,6 @@ FOUNDATION_EXTERN BodyRef B2DCreateDynamicBody(WorldRef world, B2DVector positio
 
 FOUNDATION_EXTERN B2DVector B2DBodyPosition(BodyRef body);
 FOUNDATION_EXTERN B2DVector B2DBodyVelocity(BodyRef body);
+FOUNDATION_EXTERN float B2DBodyMass(BodyRef body);
 
 FOUNDATION_EXTERN void B2DBodyApplyImpulse(BodyRef body, B2DVector impulse);

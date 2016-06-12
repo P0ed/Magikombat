@@ -1,5 +1,4 @@
 import Foundation
-import Runes
 
 protocol Item {
 
@@ -45,7 +44,7 @@ final class HeroStats {
 
 	func updateStats(items: [Item], skills: [PassiveSkill]) {
 		stats = startingStats
-		applyItem <^> items
+		items.forEach(applyItem)
 	}
 
 	func applyItem(item: Item) {

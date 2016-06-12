@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'BrightFutures'
-  s.version = '3.1.2'
+  s.version = '4.1.0'
   s.license = 'MIT'
   s.summary = 'Write great asynchronous code in Swift using futures and promises'
   s.homepage = 'https://github.com/Thomvis/BrightFutures'
@@ -11,10 +11,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
 
   s.source_files = 'BrightFutures/*.swift'
 
-  s.dependency 'Result', '0.6.0-beta.6'
+  s.dependency 'Result', '~> 2.0'
 
   s.requires_arc = true
 end

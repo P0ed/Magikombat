@@ -51,7 +51,8 @@ final class Renderer {
 	}
 
 	func renderState(state: GameState) {
-		hero.position = CGPoint(state.hero.position)
+		let position = state.hero.position
+		hero.position = CGPoint(x: Double(position.dx) * Double(tileSize), y: Double(position.dy) * Double(tileSize))
 
 		camera.position = hero.position
 	}

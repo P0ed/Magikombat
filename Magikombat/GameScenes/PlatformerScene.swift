@@ -12,7 +12,7 @@ class PlatformerScene: BaseScene {
 		super.didMoveToView(view);
 
 		world = SKNode()
-		self.addChild(world)
+		addChild(world)
 
 		let generator = TileMapGenerator(seed: Int(arc4random_uniform(256) + 1), width: 256, height: 64)
 		let level = generator.generateLevel()
